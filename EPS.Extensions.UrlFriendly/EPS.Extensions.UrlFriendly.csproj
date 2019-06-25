@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <Title>UrlFriendly</Title>
+        <Authors>endpointsystems</Authors>
+        <Description>Taken from Johan Bostrom's blog, this code helps normalize characters to SEO and URL-friendly content, removing spaces, diacritics and international characters.</Description>
+        <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
+        <PackageTags>SEO, url, text</PackageTags>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageLicenseUrl>https://github.com/endpointsystems/EPS.Extensions/blob/master/LICENSE</PackageLicenseUrl>
+    </PropertyGroup>
+
+</Project>

@@ -1,0 +1,9 @@
+/repos/EPS.Extensions/EPS.Extensions.UrlFriendly/bin/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.deps.json
+/repos/EPS.Extensions/EPS.Extensions.UrlFriendly/bin/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.dll
+/repos/EPS.Extensions/EPS.Extensions.UrlFriendly/bin/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.pdb
+/repos/EPS.Extensions/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.csprojAssemblyReference.cache
+/repos/EPS.Extensions/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.csproj.CoreCompileInputs.cache
+/repos/EPS.Extensions/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.AssemblyInfoInputs.cache
+/repos/EPS.Extensions/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.AssemblyInfo.cs
+/repos/EPS.Extensions/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.dll
+/repos/EPS.Extensions/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.pdb
