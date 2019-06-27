@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPS.Extensions.UrlFriendly", "EPS.Extensions.UrlFriendly\EPS.Extensions.UrlFriendly.csproj", "{CCF2B911-B901-44E1-9136-06A7881ED0B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPS.Extensions.YamlMarkdown", "EPS.Extensions.YamlMarkdown\EPS.Extensions.YamlMarkdown.csproj", "{9B716A00-56E6-4C80-817B-B56C5C468C9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{CCF2B911-B901-44E1-9136-06A7881ED0B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCF2B911-B901-44E1-9136-06A7881ED0B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCF2B911-B901-44E1-9136-06A7881ED0B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B716A00-56E6-4C80-817B-B56C5C468C9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B716A00-56E6-4C80-817B-B56C5C468C9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B716A00-56E6-4C80-817B-B56C5C468C9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B716A00-56E6-4C80-817B-B56C5C468C9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffde3953-5735-4546-ad29-cd3173370823" name="Default Changelist" comment="" />
+    <list default="true" id="ffde3953-5735-4546-ad29-cd3173370823" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/bin/Release/EPS.Extensions.UrlFriendly.1.0.0.nupkg" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/bin/Release/EPS.Extensions.UrlFriendly.1.0.0.nupkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/EPS.Extensions.UrlFriendly.1.0.0.nuspec" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/EPS.Extensions.UrlFriendly.1.0.0.nuspec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.sln" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.sln" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EPS.Extensions.UrlFriendly/StringHelper.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
+            <state relative-caret-position="152">
               <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
               <folding>
                 <marker date="1561426209318" expanded="false" signature="6:46" ph="..." />
@@ -63,6 +70,42 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="118" column="9" lean-forward="true" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
+              <folding>
+                <marker date="1561593532379" expanded="false" signature="6:183" ph="..." />
+                <marker date="1561593532379" expanded="true" signature="222:4133" ph="{...}" />
+                <marker date="1561593532379" expanded="true" signature="229:408" ph="/// Deserialize the YAML and return the Markdown and HTML. ... " />
+                <marker date="1561593532379" expanded="true" signature="456:4131" ph="{...}" />
+                <marker date="1561593532379" expanded="true" signature="600:691" ph="{...}" />
+                <marker date="1561593532379" expanded="true" signature="701:895" ph="/// Parses a file from the file system. ... " />
+                <marker date="1561593532379" expanded="true" signature="931:1944" ph="{...}" />
+                <marker date="1561593532379" expanded="true" signature="1073:1911" ph="{...}" />
+                <marker date="1561593532379" expanded="true" signature="1236:1325" ph="{...}" />
+                <marker date="1561593532379" expanded="true" signature="1373:1747" ph="{...}" />
+                <marker date="1561593532379" expanded="true" signature="1954:2193" ph="/// Parse the &lt;see cref=&quot;TextReader&quot;/&gt; and return the deserialized YAML. ... " />
+                <marker date="1561593532379" expanded="true" signature="2239:3050" ph="{...}" />
+                <marker date="1561593532379" expanded="true" signature="2417:2494" ph="{...}" />
+                <marker date="1561593532379" expanded="true" signature="2538:2892" ph="{...}" />
+                <marker date="1561593532379" expanded="true" signature="3060:3268" ph="/// Render the Markdown data to generic HTML. ... " />
+                <marker date="1561593532379" expanded="true" signature="3320:3733" ph="{...}" />
+                <marker date="1561593532379" expanded="true" signature="3743:3845" ph="/// Gets the markdown pulled from the YAML/Markdown file. ... " />
+                <marker date="1561593532379" expanded="true" signature="3876:3933" ph="{...}" />
+                <marker date="1561593532379" expanded="true" signature="3943:4045" ph="/// Gets the parsed Markdown from the YAML/Markdown file. ... " />
+                <marker date="1561593532379" expanded="true" signature="4072:4125" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/EPS.Extensions.YamlMarkdown.csproj">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -70,12 +113,15 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/EPS.Extensions.UrlFriendly/StringHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EPS.Extensions.UrlFriendly/ConstHelper.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/EPS.Extensions.UrlFriendly.csproj" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/Class1.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs" />
       </list>
     </option>
   </component>
@@ -93,11 +139,20 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AssemblyExplorer" />
-      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="EPS.Extensions" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -135,6 +190,8 @@
       <updated>1561426153733</updated>
       <workItem from="1561426159073" duration="1706000" />
       <workItem from="1561454431360" duration="269000" />
+      <workItem from="1561456024805" duration="499000" />
+      <workItem from="1561589148110" duration="4552000" />
     </task>
     <task id="LOCAL-00001" summary="initial add">
       <created>1561454451957</created>
@@ -147,7 +204,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1975000" />
+    <option name="totallyTimeSpent" value="7026000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -161,7 +218,7 @@
   <component name="ToolWindowManager">
     <frame x="-1" y="47" width="1922" height="985" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25294748" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25937834" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Azure Explorer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -172,11 +229,11 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32885087" />
       <window_info anchor="bottom" id="Performance Profiler" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Azure Activity Log" order="10" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="11" visible="true" weight="0.32885087" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3309091" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Unit Tests" order="13" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.32885087" />
@@ -252,7 +309,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/EPS.Extensions.UrlFriendly/StringHelper.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
+        <state relative-caret-position="152">
           <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
           <folding>
             <marker date="1561426209318" expanded="false" signature="6:46" ph="..." />
@@ -264,6 +321,41 @@
             <marker date="1561426209318" expanded="true" signature="1022:2338" ph="{...}" />
             <marker date="1561426209318" expanded="true" signature="1053:1203" ph="/* Check if the character is a letter or a digit if the character is a ... */" />
             <marker date="1561426209318" expanded="true" signature="2102:2297" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/EPS.Extensions.YamlMarkdown.csproj">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EPS.Extensions.sln">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="118" column="9" lean-forward="true" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
+          <folding>
+            <marker date="1561593532379" expanded="false" signature="6:183" ph="..." />
+            <marker date="1561593532379" expanded="true" signature="222:4133" ph="{...}" />
+            <marker date="1561593532379" expanded="true" signature="229:408" ph="/// Deserialize the YAML and return the Markdown and HTML. ... " />
+            <marker date="1561593532379" expanded="true" signature="456:4131" ph="{...}" />
+            <marker date="1561593532379" expanded="true" signature="600:691" ph="{...}" />
+            <marker date="1561593532379" expanded="true" signature="701:895" ph="/// Parses a file from the file system. ... " />
+            <marker date="1561593532379" expanded="true" signature="931:1944" ph="{...}" />
+            <marker date="1561593532379" expanded="true" signature="1073:1911" ph="{...}" />
+            <marker date="1561593532379" expanded="true" signature="1236:1325" ph="{...}" />
+            <marker date="1561593532379" expanded="true" signature="1373:1747" ph="{...}" />
+            <marker date="1561593532379" expanded="true" signature="1954:2193" ph="/// Parse the &lt;see cref=&quot;TextReader&quot;/&gt; and return the deserialized YAML. ... " />
+            <marker date="1561593532379" expanded="true" signature="2239:3050" ph="{...}" />
+            <marker date="1561593532379" expanded="true" signature="2417:2494" ph="{...}" />
+            <marker date="1561593532379" expanded="true" signature="2538:2892" ph="{...}" />
+            <marker date="1561593532379" expanded="true" signature="3060:3268" ph="/// Render the Markdown data to generic HTML. ... " />
+            <marker date="1561593532379" expanded="true" signature="3320:3733" ph="{...}" />
+            <marker date="1561593532379" expanded="true" signature="3743:3845" ph="/// Gets the markdown pulled from the YAML/Markdown file. ... " />
+            <marker date="1561593532379" expanded="true" signature="3876:3933" ph="{...}" />
+            <marker date="1561593532379" expanded="true" signature="3943:4045" ph="/// Gets the parsed Markdown from the YAML/Markdown file. ... " />
+            <marker date="1561593532379" expanded="true" signature="4072:4125" ph="{...}" />
           </folding>
         </state>
       </provider>

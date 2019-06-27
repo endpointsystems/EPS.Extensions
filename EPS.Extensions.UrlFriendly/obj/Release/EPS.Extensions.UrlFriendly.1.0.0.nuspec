@@ -7,6 +7,7 @@
     <authors>endpointsystems</authors>
     <owners>endpointsystems</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/endpointsystems/EPS.Extensions/blob/master/LICENSE</licenseUrl>
     <description>Taken from Johan Bostrom's blog, this code helps normalize characters to SEO and URL-friendly content, removing spaces, diacritics and international characters.</description>
     <tags>SEO, url, text</tags>
     <repository url="https://github.com/endpointsystems/EPS.Extensions" />
