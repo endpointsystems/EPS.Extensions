@@ -64,6 +64,17 @@ public static class StringHelper
         // Remove any excess character to meet maxlength criteria
         return maxLength <= 0 || result.Length <= maxLength ? result : result.Substring(0, maxLength);
     }
+
+    /// <summary>
+    /// The string extension method.
+    /// </summary>
+    /// <param name="text"></param>
+    /// <param name="maxlength"></param>
+    /// <returns></returns>
+    public static string MakeUrlFriendly(this string text, int maxlength = 0)
+    {
+        return UrlFriendly(text, maxlength);
+    }
 }
 
 }
