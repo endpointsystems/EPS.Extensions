@@ -2,11 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffde3953-5735-4546-ad29-cd3173370823" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/AssignedLicense.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/AssignedPlan.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/Contact.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryRole.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryRoleTemplate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainDnsCnameRecord.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainDnsRecord.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/EPS.Extensions.GraphObjects.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/ExtensionProperty.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/Group.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/ProvisionedPlan.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/ProvisioningError.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/RequestWrapper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/SignInName.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/User.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/UserIdentity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/EPS.Extensions.UrlFriendly.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/EPS.Extensions.UrlFriendly.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/StringHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/StringHelper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/bin/Release/EPS.Extensions.UrlFriendly.1.0.0.nupkg" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/bin/Release/EPS.Extensions.UrlFriendly.1.0.0.nupkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/bin/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/bin/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/bin/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/bin/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/bin/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/bin/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Debug/netcoreapp2.2/EPS.Extensions.UrlFriendly.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Debug/netcoreapp2.2/EPS.Extensions.UrlFriendly.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Debug/netcoreapp2.2/EPS.Extensions.UrlFriendly.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Debug/netcoreapp2.2/EPS.Extensions.UrlFriendly.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/EPS.Extensions.UrlFriendly.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/EPS.Extensions.UrlFriendly.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/EPS.Extensions.UrlFriendly.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/EPS.Extensions.UrlFriendly.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/EPS.Extensions.UrlFriendly.1.0.0.nuspec" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/EPS.Extensions.UrlFriendly.1.0.0.nuspec" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/bin/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/bin/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/bin/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/bin/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/bin/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/bin/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/EPS.Extensions.YamlMarkdown.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/EPS.Extensions.YamlMarkdown.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/EPS.Extensions.YamlMarkdown.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/EPS.Extensions.YamlMarkdown.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EPS.Extensions.sln" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.sln" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,113 +61,61 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EPS.Extensions.UrlFriendly/ConstHelper.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <marker date="1561426190009" expanded="true" signature="36:2331" ph="{...}" />
-                <marker date="1561426190009" expanded="true" signature="74:2330" ph="{...}" />
-                <marker date="1561426190009" expanded="true" signature="89:431" ph="/// Remaps international characters to ascii compatible ones ... " />
-                <marker date="1561426190009" expanded="true" signature="498:2324" ph="{...}" />
-                <marker date="1561426190009" expanded="true" signature="604:660" ph="{...}" />
-                <marker date="1561426190009" expanded="true" signature="702:758" ph="{...}" />
-                <marker date="1561426190009" expanded="true" signature="800:856" ph="{...}" />
-                <marker date="1561426190009" expanded="true" signature="901:957" ph="{...}" />
-                <marker date="1561426190009" expanded="true" signature="1000:1056" ph="{...}" />
-                <marker date="1561426190009" expanded="true" signature="1097:1153" ph="{...}" />
-                <marker date="1561426190009" expanded="true" signature="1193:1249" ph="{...}" />
-                <marker date="1561426190009" expanded="true" signature="1290:1346" ph="{...}" />
-                <marker date="1561426190009" expanded="true" signature="1385:1441" ph="{...}" />
-                <marker date="1561426190009" expanded="true" signature="1480:1536" ph="{...}" />
-                <marker date="1561426190009" expanded="true" signature="1575:1631" ph="{...}" />
-                <marker date="1561426190009" expanded="true" signature="1662:1718" ph="{...}" />
-                <marker date="1561426190009" expanded="true" signature="1749:1805" ph="{...}" />
-                <marker date="1561426190009" expanded="true" signature="1836:1892" ph="{...}" />
-                <marker date="1561426190009" expanded="true" signature="1923:1980" ph="{...}" />
-                <marker date="1561426190009" expanded="true" signature="2011:2068" ph="{...}" />
-                <marker date="1561426190009" expanded="true" signature="2099:2155" ph="{...}" />
-                <marker date="1561426190009" expanded="true" signature="2186:2242" ph="{...}" />
-                <marker date="1561426190009" expanded="true" signature="2259:2314" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EPS.Extensions.UrlFriendly/StringHelper.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-              <folding>
-                <marker date="1561426209318" expanded="false" signature="6:46" ph="..." />
-                <marker date="1561426209318" expanded="true" signature="84:2750" ph="{...}" />
-                <marker date="1561426209318" expanded="true" signature="119:2747" ph="{...}" />
-                <marker date="1561426209318" expanded="true" signature="126:367" ph="/// Creates a URL And SEO friendly slug ... " />
-                <marker date="1561426209318" expanded="true" signature="436:2745" ph="{...}" />
-                <marker date="1561426209318" expanded="true" signature="912:2482" ph="{...}" />
-                <marker date="1561426209318" expanded="true" signature="1022:2338" ph="{...}" />
-                <marker date="1561426209318" expanded="true" signature="1053:1203" ph="/* Check if the character is a letter or a digit if the character is a ... */" />
-                <marker date="1561426209318" expanded="true" signature="2102:2297" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="118" column="9" lean-forward="true" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
-              <folding>
-                <marker date="1561593532379" expanded="false" signature="6:183" ph="..." />
-                <marker date="1561593532379" expanded="true" signature="222:4133" ph="{...}" />
-                <marker date="1561593532379" expanded="true" signature="229:408" ph="/// Deserialize the YAML and return the Markdown and HTML. ... " />
-                <marker date="1561593532379" expanded="true" signature="456:4131" ph="{...}" />
-                <marker date="1561593532379" expanded="true" signature="600:691" ph="{...}" />
-                <marker date="1561593532379" expanded="true" signature="701:895" ph="/// Parses a file from the file system. ... " />
-                <marker date="1561593532379" expanded="true" signature="931:1944" ph="{...}" />
-                <marker date="1561593532379" expanded="true" signature="1073:1911" ph="{...}" />
-                <marker date="1561593532379" expanded="true" signature="1236:1325" ph="{...}" />
-                <marker date="1561593532379" expanded="true" signature="1373:1747" ph="{...}" />
-                <marker date="1561593532379" expanded="true" signature="1954:2193" ph="/// Parse the &lt;see cref=&quot;TextReader&quot;/&gt; and return the deserialized YAML. ... " />
-                <marker date="1561593532379" expanded="true" signature="2239:3050" ph="{...}" />
-                <marker date="1561593532379" expanded="true" signature="2417:2494" ph="{...}" />
-                <marker date="1561593532379" expanded="true" signature="2538:2892" ph="{...}" />
-                <marker date="1561593532379" expanded="true" signature="3060:3268" ph="/// Render the Markdown data to generic HTML. ... " />
-                <marker date="1561593532379" expanded="true" signature="3320:3733" ph="{...}" />
-                <marker date="1561593532379" expanded="true" signature="3743:3845" ph="/// Gets the markdown pulled from the YAML/Markdown file. ... " />
-                <marker date="1561593532379" expanded="true" signature="3876:3933" ph="{...}" />
-                <marker date="1561593532379" expanded="true" signature="3943:4045" ph="/// Gets the parsed Markdown from the YAML/Markdown file. ... " />
-                <marker date="1561593532379" expanded="true" signature="4072:4125" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/EPS.Extensions.YamlMarkdown.csproj">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.UrlFriendly/StringHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/RequestWrapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainDnsCnameRecord.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/SignInName.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryRoleTemplate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/ProvisioningError.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/AssignedPlan.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EPS.Extensions.UrlFriendly/ConstHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.UrlFriendly/StringHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/Group.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainDnsRecord.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/ProvisionedPlan.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryRole.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/Contact.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/AssignedLicense.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/ExtensionProperty.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/UserIdentity.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/EPS.Extensions.UrlFriendly.csproj" />
         <option value="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/Class1.cs" />
         <option value="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryObject.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryRole.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryRoleTemplate.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainEntity.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainDnsRecord.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainDnsCnameRecord.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/ExtensionProperty.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/Class1.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/ProvisioningError.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/Contact.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/AssignedLicense.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/PasswordProfile.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/SignInName.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/UserIdentity.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/User.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/ProvisionedPlan.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/AssignedPlan.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/Group.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/RequestWrapper.cs" />
+        <option value="$PROJECT_DIR$/AppEngine/Class1.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.AppEngine/Class1.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.AppEngine/GcpSettings.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.AppEngine/AppEngineMiddleware.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/StringHelper.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/EPS.Extensions.UrlFriendly.csproj" />
       </list>
     </option>
   </component>
@@ -131,40 +125,27 @@
     <option name="width" value="1384" />
     <option name="height" value="934" />
   </component>
+  <component name="ProjectId" id="1RelPbp4npB44K3ber3koAz5buz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator currentView="SolutionExplorer" proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="SolutionExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="EPS.Extensions" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <option name="show-all-files" value="false" />
-      </pane>
-      <pane id="AssemblyExplorer" />
-      <pane id="FileSystemExplorer" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../UrlFriendly/StringHelper.cs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/nuget" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Functions" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys_rider" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -177,6 +158,17 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Publish EPS.Extensions.UrlFriendly to folder" type="DotNetFolderPublish" factoryName="Publish to folder" temporary="true">
+      <riderPublish runtime="Portable" target_folder="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/nuget" target_framework="netcoreapp2.2" uuid_high="-3678674459838823199" uuid_low="-7983185972854599498" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Publish to folder.Publish EPS.Extensions.UrlFriendly to folder" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -192,6 +184,9 @@
       <workItem from="1561454431360" duration="269000" />
       <workItem from="1561456024805" duration="499000" />
       <workItem from="1561589148110" duration="4552000" />
+      <workItem from="1563233203485" duration="9495000" />
+      <workItem from="1570035421369" duration="3906000" />
+      <workItem from="1570734942487" duration="2340000" />
     </task>
     <task id="LOCAL-00001" summary="initial add">
       <created>1561454451957</created>
@@ -200,62 +195,40 @@
       <option name="project" value="LOCAL" />
       <updated>1561454451957</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add extension method to UrlFriendly">
+      <created>1570765749975</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1570765749975</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7026000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-1" y="47" width="1922" height="985" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25937834" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Azure Explorer" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32885087" />
-      <window_info anchor="bottom" id="Performance Profiler" order="8" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Azure Activity Log" order="10" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3309091" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Unit Tests" order="13" />
-      <window_info anchor="bottom" id="Terminal" order="14" weight="0.32885087" />
-      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Build" order="16" visible="true" weight="0.32885087" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Unit Tests Coverage" order="3" />
-      <window_info anchor="right" id="Errors In Solution" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="Google Cloud Storage" order="6" show_stripe_button="false" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
     <MESSAGE value="initial add" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial add" />
+    <MESSAGE value="add extension method to UrlFriendly" />
+    <option name="LAST_COMMIT_MESSAGE" value="add extension method to UrlFriendly" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -266,99 +239,5 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/EPS.Extensions.UrlFriendly/Class1.cs" />
-    <entry file="file://$PROJECT_DIR$/EPS.Extensions.UrlFriendly/EPS.Extensions.UrlFriendly.csproj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EPS.Extensions.UrlFriendly/ConstHelper.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1561426190009" expanded="true" signature="36:2331" ph="{...}" />
-            <marker date="1561426190009" expanded="true" signature="74:2330" ph="{...}" />
-            <marker date="1561426190009" expanded="true" signature="89:431" ph="/// Remaps international characters to ascii compatible ones ... " />
-            <marker date="1561426190009" expanded="true" signature="498:2324" ph="{...}" />
-            <marker date="1561426190009" expanded="true" signature="604:660" ph="{...}" />
-            <marker date="1561426190009" expanded="true" signature="702:758" ph="{...}" />
-            <marker date="1561426190009" expanded="true" signature="800:856" ph="{...}" />
-            <marker date="1561426190009" expanded="true" signature="901:957" ph="{...}" />
-            <marker date="1561426190009" expanded="true" signature="1000:1056" ph="{...}" />
-            <marker date="1561426190009" expanded="true" signature="1097:1153" ph="{...}" />
-            <marker date="1561426190009" expanded="true" signature="1193:1249" ph="{...}" />
-            <marker date="1561426190009" expanded="true" signature="1290:1346" ph="{...}" />
-            <marker date="1561426190009" expanded="true" signature="1385:1441" ph="{...}" />
-            <marker date="1561426190009" expanded="true" signature="1480:1536" ph="{...}" />
-            <marker date="1561426190009" expanded="true" signature="1575:1631" ph="{...}" />
-            <marker date="1561426190009" expanded="true" signature="1662:1718" ph="{...}" />
-            <marker date="1561426190009" expanded="true" signature="1749:1805" ph="{...}" />
-            <marker date="1561426190009" expanded="true" signature="1836:1892" ph="{...}" />
-            <marker date="1561426190009" expanded="true" signature="1923:1980" ph="{...}" />
-            <marker date="1561426190009" expanded="true" signature="2011:2068" ph="{...}" />
-            <marker date="1561426190009" expanded="true" signature="2099:2155" ph="{...}" />
-            <marker date="1561426190009" expanded="true" signature="2186:2242" ph="{...}" />
-            <marker date="1561426190009" expanded="true" signature="2259:2314" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EPS.Extensions.UrlFriendly/StringHelper.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-          <folding>
-            <marker date="1561426209318" expanded="false" signature="6:46" ph="..." />
-            <marker date="1561426209318" expanded="true" signature="84:2750" ph="{...}" />
-            <marker date="1561426209318" expanded="true" signature="119:2747" ph="{...}" />
-            <marker date="1561426209318" expanded="true" signature="126:367" ph="/// Creates a URL And SEO friendly slug ... " />
-            <marker date="1561426209318" expanded="true" signature="436:2745" ph="{...}" />
-            <marker date="1561426209318" expanded="true" signature="912:2482" ph="{...}" />
-            <marker date="1561426209318" expanded="true" signature="1022:2338" ph="{...}" />
-            <marker date="1561426209318" expanded="true" signature="1053:1203" ph="/* Check if the character is a letter or a digit if the character is a ... */" />
-            <marker date="1561426209318" expanded="true" signature="2102:2297" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/EPS.Extensions.YamlMarkdown.csproj">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EPS.Extensions.sln">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="118" column="9" lean-forward="true" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
-          <folding>
-            <marker date="1561593532379" expanded="false" signature="6:183" ph="..." />
-            <marker date="1561593532379" expanded="true" signature="222:4133" ph="{...}" />
-            <marker date="1561593532379" expanded="true" signature="229:408" ph="/// Deserialize the YAML and return the Markdown and HTML. ... " />
-            <marker date="1561593532379" expanded="true" signature="456:4131" ph="{...}" />
-            <marker date="1561593532379" expanded="true" signature="600:691" ph="{...}" />
-            <marker date="1561593532379" expanded="true" signature="701:895" ph="/// Parses a file from the file system. ... " />
-            <marker date="1561593532379" expanded="true" signature="931:1944" ph="{...}" />
-            <marker date="1561593532379" expanded="true" signature="1073:1911" ph="{...}" />
-            <marker date="1561593532379" expanded="true" signature="1236:1325" ph="{...}" />
-            <marker date="1561593532379" expanded="true" signature="1373:1747" ph="{...}" />
-            <marker date="1561593532379" expanded="true" signature="1954:2193" ph="/// Parse the &lt;see cref=&quot;TextReader&quot;/&gt; and return the deserialized YAML. ... " />
-            <marker date="1561593532379" expanded="true" signature="2239:3050" ph="{...}" />
-            <marker date="1561593532379" expanded="true" signature="2417:2494" ph="{...}" />
-            <marker date="1561593532379" expanded="true" signature="2538:2892" ph="{...}" />
-            <marker date="1561593532379" expanded="true" signature="3060:3268" ph="/// Render the Markdown data to generic HTML. ... " />
-            <marker date="1561593532379" expanded="true" signature="3320:3733" ph="{...}" />
-            <marker date="1561593532379" expanded="true" signature="3743:3845" ph="/// Gets the markdown pulled from the YAML/Markdown file. ... " />
-            <marker date="1561593532379" expanded="true" signature="3876:3933" ph="{...}" />
-            <marker date="1561593532379" expanded="true" signature="3943:4045" ph="/// Gets the parsed Markdown from the YAML/Markdown file. ... " />
-            <marker date="1561593532379" expanded="true" signature="4072:4125" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

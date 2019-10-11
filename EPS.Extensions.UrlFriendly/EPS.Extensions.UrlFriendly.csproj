@@ -8,7 +8,12 @@
         <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
         <PackageTags>SEO, url, text</PackageTags>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageLicense>https://github.com/endpointsystems/EPS.Extensions/blob/master/LICENSE</PackageLicense>
+        <PackageReleaseNotes>Added string extension</PackageReleaseNotes>
+        <PackageVersion>1.0.1</PackageVersion>
         <PackageLicenseUrl>https://github.com/endpointsystems/EPS.Extensions/blob/master/LICENSE</PackageLicenseUrl>
+        <PackageIconUrl>https://endpointsystems.com/favicon.ico</PackageIconUrl>
+        <RepositoryType>GitHub</RepositoryType>
     </PropertyGroup>
 
 </Project>

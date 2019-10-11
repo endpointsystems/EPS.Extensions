@@ -1,9 +1,0 @@
-/repos/EPS.Extensions/EPS.Extensions.YamlMarkdown/bin/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.deps.json
-/repos/EPS.Extensions/EPS.Extensions.YamlMarkdown/bin/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.dll
-/repos/EPS.Extensions/EPS.Extensions.YamlMarkdown/bin/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.pdb
-/repos/EPS.Extensions/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.csprojAssemblyReference.cache
-/repos/EPS.Extensions/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.csproj.CoreCompileInputs.cache
-/repos/EPS.Extensions/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.AssemblyInfoInputs.cache
-/repos/EPS.Extensions/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.AssemblyInfo.cs
-/repos/EPS.Extensions/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.dll
-/repos/EPS.Extensions/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.pdb

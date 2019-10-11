@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2019.1/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2019.1/system/resharper-host/local/Transient/ReSharperHost/v191/SolutionCaches/_EPS.Extensions.-1211228116.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.2/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_EPS.Extensions.292790559.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p=".git/info/exclude" t="IncludeRecursive" />
+      <e p="EPS.Extensions.AppEngine/bin" t="ExcludeRecursive" />
+      <e p="EPS.Extensions.AppEngine/obj" t="ExcludeRecursive" />
+      <e p="EPS.Extensions.GraphObjects" t="IncludeRecursive">
+        <e p="AssignedLicense.cs" t="Include" />
+        <e p="AssignedPlan.cs" t="Include" />
+        <e p="Contact.cs" t="Include" />
+        <e p="DirectoryObject.cs" t="Include" />
+        <e p="DirectoryRole.cs" t="Include" />
+        <e p="DirectoryRoleTemplate.cs" t="Include" />
+        <e p="DomainDnsCnameRecord.cs" t="Include" />
+        <e p="DomainDnsRecord.cs" t="Include" />
+        <e p="DomainEntity.cs" t="Include" />
+        <e p="EPS.Extensions.GraphObjects.csproj" t="IncludeRecursive" />
+        <e p="ExtensionProperty.cs" t="Include" />
+        <e p="Group.cs" t="Include" />
+        <e p="ProvisionedPlan.cs" t="Include" />
+        <e p="ProvisioningError.cs" t="Include" />
+        <e p="RequestWrapper.cs" t="Include" />
+        <e p="SignInName.cs" t="Include" />
+        <e p="User.cs" t="Include" />
+        <e p="UserIdentity.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="groups.json" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Release" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="EPS.Extensions.GraphObjects.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
       <e p="EPS.Extensions.UrlFriendly" t="IncludeRecursive">
         <e p="ConstHelper.cs" t="Include" />
         <e p="EPS.Extensions.UrlFriendly.csproj" t="IncludeRecursive" />
         <e p="README.md" t="Include" />
         <e p="StringHelper.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="nuget" t="Include">
+          <e p="EPS.Extensions.UrlFriendly.deps.json" t="Include" />
+          <e p="EPS.Extensions.UrlFriendly.dll" t="Include" />
+          <e p="EPS.Extensions.UrlFriendly.pdb" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Release" t="Include">
             <e p="netcoreapp2.2" t="Include">
@@ -32,6 +68,7 @@
         </e>
       </e>
       <e p="EPS.Extensions.sln" t="IncludeFlat" />
+      <e p="examples" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
     </e>
   </component>
