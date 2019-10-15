@@ -76,8 +76,8 @@
         <option value="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/EPS.Extensions.UrlFriendly.csproj" />
         <option value="$PROJECT_DIR$/test/EPS.Extensions.Test/UnitTest1.cs" />
         <option value="$PROJECT_DIR$/test/EPS.Extensions.Test/Types/Article.cs" />
-        <option value="$PROJECT_DIR$/test/EPS.Extensions.Test/yaml_test.cs" />
         <option value="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs" />
+        <option value="$PROJECT_DIR$/test/EPS.Extensions.Test/yaml_test.cs" />
       </list>
     </option>
   </component>
@@ -150,7 +150,7 @@
       <workItem from="1570035421369" duration="3906000" />
       <workItem from="1570734942487" duration="2340000" />
       <workItem from="1571151106919" duration="545000" />
-      <workItem from="1571151792928" duration="5795000" />
+      <workItem from="1571151792928" duration="6388000" />
     </task>
     <task id="LOCAL-00001" summary="initial add">
       <created>1561454451957</created>
