@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$USER_HOME$/.Rider2019.2/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_EPS.Extensions.292790559.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_EPS.Extensions.67215121.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.nuget/packages/machine.specifications.runner.visualstudio/2.9.0/build/netcoreapp2.1/Machine.TestAdapter.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.0.1/build/netcoreapp1.0" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.reporters.netcoreapp10.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.utility.netcoreapp10.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
-      <e p=".git/info/exclude" t="IncludeRecursive" />
-      <e p="EPS.Extensions.AppEngine/bin" t="ExcludeRecursive" />
-      <e p="EPS.Extensions.AppEngine/obj" t="ExcludeRecursive" />
       <e p="EPS.Extensions.GraphObjects" t="IncludeRecursive">
         <e p="AssignedLicense.cs" t="Include" />
         <e p="AssignedPlan.cs" t="Include" />
@@ -27,7 +31,6 @@
         <e p="User.cs" t="Include" />
         <e p="UserIdentity.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="groups.json" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Release" t="Include">
             <e p="netcoreapp2.2" t="Include">
@@ -42,11 +45,6 @@
         <e p="README.md" t="Include" />
         <e p="StringHelper.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="nuget" t="Include">
-          <e p="EPS.Extensions.UrlFriendly.deps.json" t="Include" />
-          <e p="EPS.Extensions.UrlFriendly.dll" t="Include" />
-          <e p="EPS.Extensions.UrlFriendly.pdb" t="Include" />
-        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Release" t="Include">
             <e p="netcoreapp2.2" t="Include">
@@ -70,6 +68,23 @@
       <e p="EPS.Extensions.sln" t="IncludeFlat" />
       <e p="examples" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="test" t="Include">
+        <e p="EPS.Extensions.Test" t="IncludeRecursive">
+          <e p="EPS.Extensions.Test.csproj" t="IncludeRecursive" />
+          <e p="Types" t="Include">
+            <e p="Article.cs" t="Include" />
+          </e>
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Release" t="Include">
+              <e p="netcoreapp2.2" t="Include">
+                <e p="EPS.Extensions.Test.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="yaml_test.cs" t="Include" />
+        </e>
+      </e>
     </e>
   </component>
 </project>

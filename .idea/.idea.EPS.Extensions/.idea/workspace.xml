@@ -2,57 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffde3953-5735-4546-ad29-cd3173370823" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/AssignedLicense.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/AssignedPlan.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/Contact.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryObject.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryRole.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryRoleTemplate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainDnsCnameRecord.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainDnsRecord.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/EPS.Extensions.GraphObjects.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/ExtensionProperty.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/Group.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/ProvisionedPlan.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/ProvisioningError.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/RequestWrapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/SignInName.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EPS.Extensions.GraphObjects/UserIdentity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/EPS.Extensions.Test/EPS.Extensions.Test.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/EPS.Extensions.Test/Types/Article.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/EPS.Extensions.Test/yaml_test.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/EPS.Extensions.UrlFriendly.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/EPS.Extensions.UrlFriendly.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/StringHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/StringHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/bin/Release/EPS.Extensions.UrlFriendly.1.0.0.nupkg" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/bin/Release/EPS.Extensions.UrlFriendly.1.0.0.nupkg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/bin/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/bin/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/bin/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/bin/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/bin/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/bin/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Debug/netcoreapp2.2/EPS.Extensions.UrlFriendly.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Debug/netcoreapp2.2/EPS.Extensions.UrlFriendly.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Debug/netcoreapp2.2/EPS.Extensions.UrlFriendly.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Debug/netcoreapp2.2/EPS.Extensions.UrlFriendly.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/EPS.Extensions.UrlFriendly.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/EPS.Extensions.UrlFriendly.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/EPS.Extensions.UrlFriendly.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/EPS.Extensions.UrlFriendly.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/EPS.Extensions.UrlFriendly.1.0.0.nuspec" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/EPS.Extensions.UrlFriendly.1.0.0.nuspec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/Release/netcoreapp2.2/EPS.Extensions.UrlFriendly.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/bin/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/bin/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/bin/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/bin/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/bin/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/bin/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/EPS.Extensions.YamlMarkdown.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/EPS.Extensions.YamlMarkdown.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/EPS.Extensions.YamlMarkdown.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/EPS.Extensions.YamlMarkdown.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/Release/netcoreapp2.2/EPS.Extensions.YamlMarkdown.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/EPS.Extensions.YamlMarkdown.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/EPS.Extensions.YamlMarkdown.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EPS.Extensions.sln" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.sln" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,32 +22,33 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/RequestWrapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainDnsCnameRecord.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainEntity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/SignInName.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryRoleTemplate.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/ProvisioningError.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/AssignedPlan.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.UrlFriendly/ConstHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.UrlFriendly/StringHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/Group.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainDnsRecord.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/ProvisionedPlan.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryRole.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/Contact.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/AssignedLicense.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/ExtensionProperty.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.UrlFriendly/ConstHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/test/EPS.Extensions.Test/yaml_test.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.UrlFriendly/StringHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/UserIdentity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryRole.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/AssignedPlan.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/Group.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainDnsCnameRecord.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/ProvisionedPlan.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/AssignedLicense.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/SignInName.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/RequestWrapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/test/EPS.Extensions.Test/Types/Article.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/ExtensionProperty.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryRoleTemplate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/ProvisioningError.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/Class1.cs" />
-        <option value="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs" />
         <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryObject.cs" />
         <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryRole.cs" />
         <option value="$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryRoleTemplate.cs" />
@@ -116,6 +74,10 @@
         <option value="$PROJECT_DIR$/EPS.Extensions.AppEngine/AppEngineMiddleware.cs" />
         <option value="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/StringHelper.cs" />
         <option value="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/EPS.Extensions.UrlFriendly.csproj" />
+        <option value="$PROJECT_DIR$/test/EPS.Extensions.Test/UnitTest1.cs" />
+        <option value="$PROJECT_DIR$/test/EPS.Extensions.Test/Types/Article.cs" />
+        <option value="$PROJECT_DIR$/test/EPS.Extensions.Test/yaml_test.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs" />
       </list>
     </option>
   </component>
@@ -145,7 +107,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys_rider" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -159,7 +121,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Publish to folder.Publish EPS.Extensions.UrlFriendly to folder">
     <configuration name="Publish EPS.Extensions.UrlFriendly to folder" type="DotNetFolderPublish" factoryName="Publish to folder" temporary="true">
       <riderPublish runtime="Portable" target_folder="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/nuget" target_framework="netcoreapp2.2" uuid_high="-3678674459838823199" uuid_low="-7983185972854599498" />
       <method v="2" />
@@ -187,6 +149,8 @@
       <workItem from="1563233203485" duration="9495000" />
       <workItem from="1570035421369" duration="3906000" />
       <workItem from="1570734942487" duration="2340000" />
+      <workItem from="1571151106919" duration="545000" />
+      <workItem from="1571151792928" duration="5795000" />
     </task>
     <task id="LOCAL-00001" summary="initial add">
       <created>1561454451957</created>

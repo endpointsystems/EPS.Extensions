@@ -16,13 +16,13 @@ namespace EPS.Extensions.YamlMarkdown
     public class YamlMarkdown<T> where T: new()
     {
         private readonly IDeserializer yaml;
-        private string markdown;
-        private string html;
+        private readonly ISerializer yamlSerializer;
 
         public YamlMarkdown()
         {
             yaml = new DeserializerBuilder()
                 .Build();
+            yamlSerializer = new Serializer();
         }
 
         /// <summary>
@@ -49,12 +49,13 @@ namespace EPS.Extensions.YamlMarkdown
                                                    "separators and the YAML syntax before trying again. Further " +
                                                    "details can be found in the original inner exception.",se);
                 }
-                
+
                 parser.Expect<DocumentEnd>();
-                markdown = input.ReadToEnd();
-                html = Render(markdown);
+                Markdown = input.ReadToEnd();
+                Html = Render(Markdown);
             }
 
+            DataObject = t;
             return t;
         }
 
@@ -80,10 +81,37 @@ namespace EPS.Extensions.YamlMarkdown
                                                "details can be found in the original inner exception.",se);
             }
             parser.Expect<DocumentEnd>();
-            markdown = textReader.ReadToEnd();
-            html = Render(markdown);
+            Markdown = textReader.ReadToEnd();
+            Html = Render(Markdown);
+            DataObject = t;
             return t;
         }
+
+        /// <summary>
+        /// Save the YAML and markdown to a file.
+        /// </summary>
+        /// <param name="obj">The typed object you wish to save</param>
+        /// <param name="markdown">The markdown you wish to save with it</param>
+        /// <param name="path">The path to persist data to.</param>
+        /// <remarks>
+        /// This method saves your YAML and content as a YAML-flavored Markdown file.
+        /// </remarks>
+        public void Save(T obj, string markdown, string path)
+        {
+            var y = yamlSerializer.Serialize(obj);
+            var sb = new StringBuilder();
+            sb.AppendLine("---");
+            sb.Append(y);
+            sb.AppendLine("---");
+            sb.Append(markdown);
+            File.WriteAllText(path,sb.ToString());
+        }
+
+        public void Save(string markdown, string path)
+        {
+            Save(DataObject,markdown,path);
+        }
+
 
         /// <summary>
         /// Render the Markdown data to generic HTML.
@@ -104,20 +132,17 @@ namespace EPS.Extensions.YamlMarkdown
             return sb.ToString();
         }
 
+        public T DataObject { get; set; }
+
         /// <summary>
         /// Gets the markdown pulled from the YAML/Markdown file.
         /// </summary>
-        public string Markdown
-        {
-            get { return markdown; }
-        }
+        public string Markdown { get; set; }
 
         /// <summary>
         /// Gets the parsed Markdown from the YAML/Markdown file.
         /// </summary>
-        public string Html
-        {
-            get { return html; }
-        }
+        public string Html{get;set;}
+
     }
 }
