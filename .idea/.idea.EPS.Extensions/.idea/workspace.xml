@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffde3953-5735-4546-ad29-cd3173370823" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/EPS.Extensions.Test/EPS.Extensions.Test.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/EPS.Extensions.Test/Types/Article.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/EPS.Extensions.Test/yaml_test.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/StringExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/riderModule.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/EPS.Extensions.YamlMarkdown.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/EPS.Extensions.YamlMarkdown.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EPS.Extensions.sln" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,28 +18,29 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainDnsRecord.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/Contact.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.UrlFriendly/ConstHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/test/EPS.Extensions.Test/yaml_test.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.UrlFriendly/StringHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/UserIdentity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryRole.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/AssignedPlan.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/Group.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainDnsCnameRecord.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/ProvisionedPlan.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/AssignedLicense.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/SignInName.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/RequestWrapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/User.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/test/EPS.Extensions.Test/Types/Article.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainDnsCnameRecord.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/test/EPS.Extensions.Test/yaml_test.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainEntity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/ExtensionProperty.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/SignInName.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryRoleTemplate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/ProvisioningError.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/AssignedPlan.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.UrlFriendly/ConstHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.UrlFriendly/StringHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/StringExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/Group.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DomainDnsRecord.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/ProvisionedPlan.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/DirectoryRole.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/Contact.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/AssignedLicense.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/ExtensionProperty.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/test/EPS.Extensions.Test/Types/Article.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EPS.Extensions.GraphObjects/UserIdentity.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -76,16 +73,12 @@
         <option value="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/EPS.Extensions.UrlFriendly.csproj" />
         <option value="$PROJECT_DIR$/test/EPS.Extensions.Test/UnitTest1.cs" />
         <option value="$PROJECT_DIR$/test/EPS.Extensions.Test/Types/Article.cs" />
-        <option value="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs" />
         <option value="$PROJECT_DIR$/test/EPS.Extensions.Test/yaml_test.cs" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/StringExtensions.cs" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs" />
       </list>
     </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="259" />
-    <option name="y" value="67" />
-    <option name="width" value="1384" />
-    <option name="height" value="934" />
   </component>
   <component name="ProjectId" id="1RelPbp4npB44K3ber3koAz5buz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -151,6 +144,7 @@
       <workItem from="1570734942487" duration="2340000" />
       <workItem from="1571151106919" duration="545000" />
       <workItem from="1571151792928" duration="6388000" />
+      <workItem from="1571368997651" duration="2638000" />
     </task>
     <task id="LOCAL-00001" summary="initial add">
       <created>1561454451957</created>

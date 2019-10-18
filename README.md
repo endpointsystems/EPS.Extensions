@@ -14,3 +14,22 @@ One simple class with one simple function - parsing Markdown files with YAML fro
 
 This code deserializes the YAML to the type you pass in, and gives you the Markdown and generic HTML of the rest of the file. 
 
+To use this code: 
+
+```c#
+var ym = new YamlMarkdown<Article>();
+var article = ym.Parse("~/articles/myArticle.md");
+// var article = ym.DataObject also works
+var html = ym.Html;
+var markdown = ym.Markdown;
+```
+
+10/17/2019 update: we've added [Html2Markdown](https://github.com/baynezy/Html2Markdown) to our package in order to create two string extensions methods:
+
+```c#
+var convertedHtml = markdown.ToHtml();
+var convertedMd = html.ToMarkdown();
+```
+Now you can effortlessly switch between the two.
+
+
