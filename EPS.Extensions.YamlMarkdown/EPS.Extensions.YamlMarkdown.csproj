@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp2.2</TargetFramework>
-        <PackageVersion>0.3.0</PackageVersion>
+        <PackageVersion>0.4.0</PackageVersion>
         <Title>YamlMarkdown - Markdown with YAML front-matter</Title>
         <Description>If you've ever worked on an app and you needed quick access to something that can read a Markdown file with YAML front-matter, then this is your library. Using YamlDotNet and Markdig, we take your YAML object, serialize it for you, and give you Markdown and parsed HTML for your page data. </Description>
         <PackageProjectUrl>https://github.com/endpointsystems/EPS.Extensions</PackageProjectUrl>
@@ -10,14 +10,14 @@
         <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <PackageTags>Markdown, YAML, YAML front-end</PackageTags>
-        <PackageReleaseNotes>Add string.ToHtml() and string.ToMarkdown() extension methods.</PackageReleaseNotes>
+        <PackageReleaseNotes>added some obvious constructor to YamlMarkdown that should have been there all along.</PackageReleaseNotes>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="Html2Markdown" Version="3.2.1.341" />
-      <PackageReference Include="Markdig" Version="0.17.0" />
-      <PackageReference Include="YamlDotNet" Version="6.1.1" />
+      <PackageReference Include="Markdig" Version="0.18.0" />
+      <PackageReference Include="YamlDotNet" Version="8.0.0" />
     </ItemGroup>
 
 </Project>

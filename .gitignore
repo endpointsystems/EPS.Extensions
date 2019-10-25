@@ -23,10 +23,10 @@ bld/
 [Ll]og/
 **/bin/**
 **/obj/**
-
+.idea/
 # Visual Studio 2015 cache/options directory
 .vs/
-# Uncomment if you have tasks that create the project's static files in 
+# Uncomment if you have tasks that create the project's static files in
 wwwroot
 #wwwroot/
 
@@ -148,16 +148,16 @@ publish/
 # Publish Web Output
 *.[Pp]ublish.xml
 *.azurePubxml
-# TODO: Comment the next line if you want to checkin your web deploy 
+# TODO: Comment the next line if you want to checkin your web deploy
 settings
-# but database connection strings (with potential passwords) will be 
+# but database connection strings (with potential passwords) will be
 unencrypted
 *.pubxml
 *.publishproj
 
-# Microsoft Azure Web App publish settings. Comment the next line if you 
+# Microsoft Azure Web App publish settings. Comment the next line if you
 want to
-# checkin your Azure Web App publish settings, but sensitive information 
+# checkin your Azure Web App publish settings, but sensitive information
 contained
 # in these scripts will be unencrypted
 PublishScripts/
@@ -168,7 +168,7 @@ PublishScripts/
 **/packages/*
 # except build/, which is used as an MSBuild target.
 !**/packages/build/
-# Uncomment if necessary however generally it will be regenerated when 
+# Uncomment if necessary however generally it will be regenerated when
 needed
 #!**/packages/repositories.config
 # NuGet v3's project.json files produces more ignoreable files
@@ -207,7 +207,7 @@ ClientBin/
 node_modules/
 orleans.codegen.cs
 
-# Since there are multiple workflows, uncomment next line to ignore 
+# Since there are multiple workflows, uncomment next line to ignore
 bower_components
 # (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
 #bower_components/

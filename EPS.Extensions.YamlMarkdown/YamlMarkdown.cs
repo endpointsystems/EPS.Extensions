@@ -15,16 +15,32 @@ namespace EPS.Extensions.YamlMarkdown
     /// <typeparam name="T">The data type to deserialize from the YAML.</typeparam>
     public class YamlMarkdown<T> where T: new()
     {
-        private readonly IDeserializer yaml;
-        private readonly ISerializer yamlSerializer;
+        private IDeserializer yaml;
+        private ISerializer yamlSerializer;
 
         public YamlMarkdown()
+        {
+            init();
+        }
+
+        public YamlMarkdown(string filePath)
+        {
+            init();
+            Parse(filePath);
+        }
+
+        public YamlMarkdown(TextReader reader)
+        {
+            init();
+            Parse(reader);
+        }
+
+        private void init()
         {
             yaml = new DeserializerBuilder()
                 .Build();
             yamlSerializer = new Serializer();
         }
-
         /// <summary>
         /// Parses a file from the file system.
         /// </summary>
@@ -37,8 +53,8 @@ namespace EPS.Extensions.YamlMarkdown
             using (var input = new StringReader(text))
             {
                 var parser = new Parser(input);
-                parser.Expect<StreamStart>();
-                parser.Expect<DocumentStart>();
+                parser.Consume<StreamStart>();
+                parser.Consume<DocumentStart>();
                 try
                 {
                     t = yaml.Deserialize<T>(parser);
@@ -50,7 +66,7 @@ namespace EPS.Extensions.YamlMarkdown
                                                    "details can be found in the original inner exception.",se);
                 }
 
-                parser.Expect<DocumentEnd>();
+                parser.Consume<DocumentEnd>();
                 Markdown = input.ReadToEnd();
                 Html = Render(Markdown);
             }
@@ -68,8 +84,8 @@ namespace EPS.Extensions.YamlMarkdown
         {
             T t;
             var parser = new Parser(textReader);
-            parser.Expect<StreamStart>();
-            parser.Expect<DocumentStart>();
+            parser.Consume<StreamStart>();
+            parser.Consume<DocumentStart>();
             try
             {
                 t = yaml.Deserialize<T>(parser);
@@ -80,7 +96,7 @@ namespace EPS.Extensions.YamlMarkdown
                                                "separators and the YAML syntax before trying again. Further " +
                                                "details can be found in the original inner exception.",se);
             }
-            parser.Expect<DocumentEnd>();
+            parser.Consume<DocumentEnd>();
             Markdown = textReader.ReadToEnd();
             Html = Render(Markdown);
             DataObject = t;
@@ -142,6 +158,7 @@ namespace EPS.Extensions.YamlMarkdown
         /// <summary>
         /// Gets the parsed Markdown from the YAML/Markdown file.
         /// </summary>
+        // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public string Html{get;set;}
 
     }
