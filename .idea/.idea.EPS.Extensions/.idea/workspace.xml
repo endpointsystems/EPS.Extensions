@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffde3953-5735-4546-ad29-cd3173370823" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/StringExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EPS.Extensions/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/EPS.Extensions.YamlMarkdown.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/EPS.Extensions.YamlMarkdown.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EPS.Extensions.YamlMarkdown/YamlMarkdown.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +112,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Publish to folder.Publish EPS.Extensions.UrlFriendly to folder">
+  <component name="RunManager">
     <configuration name="Publish EPS.Extensions.UrlFriendly to folder" type="DotNetFolderPublish" factoryName="Publish to folder" temporary="true">
       <riderPublish runtime="Portable" target_folder="$PROJECT_DIR$/EPS.Extensions.UrlFriendly/nuget" target_framework="netcoreapp2.2" uuid_high="-3678674459838823199" uuid_low="-7983185972854599498" />
       <method v="2" />
@@ -144,7 +142,8 @@
       <workItem from="1570734942487" duration="2340000" />
       <workItem from="1571151106919" duration="545000" />
       <workItem from="1571151792928" duration="6388000" />
-      <workItem from="1571368997651" duration="2638000" />
+      <workItem from="1571368997651" duration="3271000" />
+      <workItem from="1571975030474" duration="466000" />
     </task>
     <task id="LOCAL-00001" summary="initial add">
       <created>1561454451957</created>
