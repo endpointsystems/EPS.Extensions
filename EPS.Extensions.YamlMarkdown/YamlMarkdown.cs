@@ -25,6 +25,7 @@ namespace EPS.Extensions.YamlMarkdown
 
         public YamlMarkdown(string filePath)
         {
+            FileName = Path.GetFileNameWithoutExtension(filePath);
             init();
             Parse(filePath);
         }
@@ -49,6 +50,7 @@ namespace EPS.Extensions.YamlMarkdown
         public T Parse(string path)
         {
             T t;
+            FileName = Path.GetFileNameWithoutExtension(path);
             var text = File.ReadAllText(path);
             using (var input = new StringReader(text))
             {
@@ -63,7 +65,11 @@ namespace EPS.Extensions.YamlMarkdown
                 {
                     throw new SyntaxErrorException("An exception occured parsing the YAML. Check the dash " +
                                                    "separators and the YAML syntax before trying again. Further " +
-                                                   "details can be found in the original inner exception.",se);
+                                                   "details can be found in the original inner exception.", se);
+                }
+                catch (YamlException ye)
+                {
+                    throw new SyntaxErrorException($"An exception occured parsing {path} - {ye.Message} ");
                 }
 
                 parser.Consume<DocumentEnd>();
@@ -95,6 +101,10 @@ namespace EPS.Extensions.YamlMarkdown
                 throw new SyntaxErrorException("An exception occured parsing the YAML. Check the dash " +
                                                "separators and the YAML syntax before trying again. Further " +
                                                "details can be found in the original inner exception.",se);
+            }
+            catch (YamlException ye)
+            {
+                throw new SyntaxErrorException($"An exception occured parsing text - {ye.Message} ");
             }
             parser.Consume<DocumentEnd>();
             Markdown = textReader.ReadToEnd();
@@ -148,6 +158,7 @@ namespace EPS.Extensions.YamlMarkdown
             return sb.ToString();
         }
 
+        public string FileName { get; set; }
         public T DataObject { get; set; }
 
         /// <summary>
