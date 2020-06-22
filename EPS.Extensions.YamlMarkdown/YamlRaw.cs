@@ -1,36 +1,35 @@
-﻿using System.IO;
+using System.IO;
 using System.Text;
-using Markdig;
-using Markdig.Parsers;
-using Markdig.Renderers;
 using YamlDotNet.Core;
 using YamlDotNet.Core.Events;
 using YamlDotNet.Serialization;
 
 namespace EPS.Extensions.YamlMarkdown
 {
+
     /// <summary>
-    /// Deserialize the YAML and return the Markdown and HTML.
+    /// Deserialize the YAML and return the unparsed message body.
     /// </summary>
     /// <typeparam name="T">The data type to deserialize from the YAML.</typeparam>
-    public class YamlMarkdown<T> where T: new()
+    public class YamlRaw<T> where T: new()
     {
         private IDeserializer yaml;
         private ISerializer yamlSerializer;
 
-        public YamlMarkdown()
+        public YamlRaw()
         {
             init();
         }
 
-        public YamlMarkdown(string filePath)
+        public YamlRaw(string filePath)
         {
+            FilePath = filePath;
             FileName = Path.GetFileNameWithoutExtension(filePath);
             init();
             Parse(filePath);
         }
 
-        public YamlMarkdown(TextReader reader)
+        public YamlRaw(TextReader reader)
         {
             init();
             Parse(reader);
@@ -42,15 +41,9 @@ namespace EPS.Extensions.YamlMarkdown
                 .Build();
             yamlSerializer = new Serializer();
         }
-        /// <summary>
-        /// Parses a file from the file system.
-        /// </summary>
-        /// <param name="path">The file path.</param>
-        /// <returns>The deserialized object.</returns>
         public T Parse(string path)
         {
             T t;
-            FileName = Path.GetFileNameWithoutExtension(path);
             var text = File.ReadAllText(path);
             using (var input = new StringReader(text))
             {
@@ -69,23 +62,21 @@ namespace EPS.Extensions.YamlMarkdown
                 }
                 catch (YamlException ye)
                 {
-                    throw new SyntaxErrorException($"An exception occured parsing {path} - {ye.InnerException?.Message} ");
+                    throw new SyntaxErrorException($"An exception occured parsing {path} - {ye.Message} ");
                 }
 
                 parser.Consume<DocumentEnd>();
-                Markdown = input.ReadToEnd();
-                Html = Render(Markdown);
+                Content = input.ReadToEnd();
             }
 
             DataObject = t;
             return t;
         }
-
         /// <summary>
         /// Parse the <see cref="TextReader"/> and return the deserialized YAML.
         /// </summary>
         /// <param name="textReader">The <see cref="TextReader"/> to deserialize.</param>
-        /// <returns></returns>
+        /// <returns>The deserialized object.</returns>
         public T Parse(TextReader textReader)
         {
             T t;
@@ -107,8 +98,7 @@ namespace EPS.Extensions.YamlMarkdown
                 throw new SyntaxErrorException($"An exception occured parsing text - {ye.Message} ");
             }
             parser.Consume<DocumentEnd>();
-            Markdown = textReader.ReadToEnd();
-            Html = Render(Markdown);
+            Content = textReader.ReadToEnd();
             DataObject = t;
             return t;
         }
@@ -117,60 +107,32 @@ namespace EPS.Extensions.YamlMarkdown
         /// Save the YAML and markdown to a file.
         /// </summary>
         /// <param name="obj">The typed object you wish to save</param>
-        /// <param name="markdown">The markdown you wish to save with it</param>
+        /// <param name="content">The content you wish to save with it</param>
         /// <param name="path">The path to persist data to.</param>
         /// <remarks>
-        /// This method saves your YAML and content as a YAML-flavored Markdown file.
+        /// This method saves your YAML and content as a YAML-flavored Markdown file. This method also does not update
+        /// the object itself.
         /// </remarks>
-        public void Save(T obj, string markdown, string path)
+        public void Save(T obj, string content, string path)
         {
             var y = yamlSerializer.Serialize(obj);
             var sb = new StringBuilder();
             sb.AppendLine("---");
             sb.Append(y);
             sb.AppendLine("---");
-            sb.Append(markdown);
+            sb.Append(content);
             File.WriteAllText(path,sb.ToString());
         }
 
-        public void Save(string markdown, string path)
+        public void Save(string content, string path)
         {
-            Save(DataObject,markdown,path);
+            Save(DataObject,content,path);
         }
 
-
-        /// <summary>
-        /// Render the Markdown data to generic HTML.
-        /// </summary>
-        /// <param name="markup">The Markdown to mark up.</param>
-        /// <returns>Generic HTML markup.</returns>
-        private static string Render(string markup)
-        {
-            var sb = new StringBuilder();
-            var sw = new StringWriter(sb);
-            var render = new HtmlRenderer(sw);
-            var pipeline = new MarkdownPipelineBuilder()
-                .Build();
-            pipeline.Setup(render);
-            var doc = MarkdownParser.Parse(markup);
-            render.Render(doc);
-            sw.Flush();
-            return sb.ToString();
-        }
+        public string Content { get; set; }
 
         public string FileName { get; set; }
+        public string FilePath { get; set; }
         public T DataObject { get; set; }
-
-        /// <summary>
-        /// Gets the markdown pulled from the YAML/Markdown file.
-        /// </summary>
-        public string Markdown { get; set; }
-
-        /// <summary>
-        /// Gets the parsed Markdown from the YAML/Markdown file.
-        /// </summary>
-        // ReSharper disable once UnusedAutoPropertyAccessor.Global
-        public string Html{get;set;}
-
     }
 }

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <AssemblyName>EPS.Extensions.SiteMapIndex</AssemblyName>
+        <RootNamespace>EPS.Extensions.SiteMapIndex</RootNamespace>
+        <PackageId>EPS.Extensions.SiteMapIndex</PackageId>
+        <PackageVersion>0.1</PackageVersion>
+        <Authors>endpointsystems</Authors>
+    </PropertyGroup>
+
+</Project>

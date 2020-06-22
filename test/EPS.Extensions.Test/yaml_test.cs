@@ -2,15 +2,13 @@ using System;
 using EPS.Extensions.Test.Types;
 using EPS.Extensions.YamlMarkdown;
 using Machine.Specifications;
-using Machine.Specifications.Model;
-using Xunit;
 
 namespace EPS.Extensions.Test
 {
     public class yaml_test
     {
-        private static string inPath = "~/test/in/in.md";
-        private static string outPath = "~/test/out/out.md";
+        private static string inPath = AppDomain.CurrentDomain.BaseDirectory + "/test/in/md_in.md";
+        private static string outPath = AppDomain.CurrentDomain.BaseDirectory + "test/out/md_out.md";
 
         private static YamlMarkdown<Article> yamlArticle;
         private static Article article;

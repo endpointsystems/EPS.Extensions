@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{614D2E51-A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPS.Extensions.Test", "test\EPS.Extensions.Test\EPS.Extensions.Test.csproj", "{877632C1-3A2C-4B5B-9B9A-68998FCBC527}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPS.Extensions.SiteMapIndex", "EPS.Extensions.SiteMapIndex\EPS.Extensions.SiteMapIndex.csproj", "{DAAD030C-ADC1-4BF3-9083-F19519AC089C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPS.Samples.SiteMapIndex", "EPS.Samples.SiteMapIndex\EPS.Samples.SiteMapIndex.csproj", "{72BBAE4D-CDDA-40D2-8D08-686B136D1DA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,8 +38,17 @@ Global
 		{877632C1-3A2C-4B5B-9B9A-68998FCBC527}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{877632C1-3A2C-4B5B-9B9A-68998FCBC527}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{877632C1-3A2C-4B5B-9B9A-68998FCBC527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAAD030C-ADC1-4BF3-9083-F19519AC089C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAAD030C-ADC1-4BF3-9083-F19519AC089C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAAD030C-ADC1-4BF3-9083-F19519AC089C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAAD030C-ADC1-4BF3-9083-F19519AC089C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72BBAE4D-CDDA-40D2-8D08-686B136D1DA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72BBAE4D-CDDA-40D2-8D08-686B136D1DA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72BBAE4D-CDDA-40D2-8D08-686B136D1DA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72BBAE4D-CDDA-40D2-8D08-686B136D1DA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{877632C1-3A2C-4B5B-9B9A-68998FCBC527} = {614D2E51-A7EC-44F4-BE27-79C13894D90D}
+		{72BBAE4D-CDDA-40D2-8D08-686B136D1DA2} = {7E7F5CF7-46F8-4287-A6AB-E6758E255B7B}
 	EndGlobalSection
 EndGlobal
