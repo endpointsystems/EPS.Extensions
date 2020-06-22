@@ -32,4 +32,5 @@ var convertedMd = html.ToMarkdown();
 ```
 Now you can effortlessly switch between the two.
 
-
+## SiteMapIndex
+When you have thousands of URLs in your project, organizing them into site maps is crucial for search engine indexing. This project helps you build site maps and site map indexes. See the [example project]() for a demonstration of it in action.

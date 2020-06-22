@@ -5,8 +5,18 @@
         <AssemblyName>EPS.Extensions.SiteMapIndex</AssemblyName>
         <RootNamespace>EPS.Extensions.SiteMapIndex</RootNamespace>
         <PackageId>EPS.Extensions.SiteMapIndex</PackageId>
-        <PackageVersion>0.1</PackageVersion>
+        <PackageVersion>0.5</PackageVersion>
         <Authors>endpointsystems</Authors>
+        <Title>SiteMapIndex</Title>
+        <Description>This package helps build out site maps as well as site map indexes. Designed for use in large projects where multiple site maps are used. </Description>
+        <Copyright>2020 Endpoint Systems. All rights reserved.</Copyright>
+        <PackageProjectUrl>https://github.com/endpointsystems/EPS.Extensions</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/endpointsystems/EPS.Extensions/blob/master/LICENSE</PackageLicenseUrl>
+        <PackageIconUrl>https://res.cloudinary.com/endpoint-systems/image/upload/v1580768327/ES_ico_nkoihx.png</PackageIconUrl>
+        <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
+        <RepositoryType>GitHub</RepositoryType>
+        <PackageTags>site map, sitemap, site map index, sitemapindex</PackageTags>
+        <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
     </PropertyGroup>
 
 </Project>
