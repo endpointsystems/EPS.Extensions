@@ -13,35 +13,32 @@ namespace EPS.Extensions.YamlMarkdown
     /// Deserialize the YAML and return the Markdown and HTML.
     /// </summary>
     /// <typeparam name="T">The data type to deserialize from the YAML.</typeparam>
-    public class YamlMarkdown<T> where T: new()
+    public class YamlMarkdown<T> where T : new()
     {
         private IDeserializer yaml;
         private ISerializer yamlSerializer;
 
-        public YamlMarkdown()
+        public YamlMarkdown(IDeserializer deserializerBuilder = null)
         {
-            init();
+            init(deserializerBuilder);
         }
 
-        public YamlMarkdown(string filePath)
+        public YamlMarkdown(string filePath, IDeserializer deserializerBuilder = null) : this(deserializerBuilder)
         {
-            FileName = Path.GetFileNameWithoutExtension(filePath);
-            init();
             Parse(filePath);
         }
 
-        public YamlMarkdown(TextReader reader)
+        public YamlMarkdown(TextReader reader, IDeserializer deserializerBuilder = null) : this(deserializerBuilder)
         {
-            init();
             Parse(reader);
         }
 
-        private void init()
+        private void init(IDeserializer deserializerBuilder = null)
         {
-            yaml = new DeserializerBuilder()
-                .Build();
+            yaml = deserializerBuilder != null ? deserializerBuilder : new DeserializerBuilder().Build();
             yamlSerializer = new Serializer();
         }
+
         /// <summary>
         /// Parses a file from the file system.
         /// </summary>
@@ -100,7 +97,7 @@ namespace EPS.Extensions.YamlMarkdown
             {
                 throw new SyntaxErrorException("An exception occured parsing the YAML. Check the dash " +
                                                "separators and the YAML syntax before trying again. Further " +
-                                               "details can be found in the original inner exception.",se);
+                                               "details can be found in the original inner exception.", se);
             }
             catch (YamlException ye)
             {
@@ -130,12 +127,12 @@ namespace EPS.Extensions.YamlMarkdown
             sb.Append(y);
             sb.AppendLine("---");
             sb.Append(markdown);
-            File.WriteAllText(path,sb.ToString());
+            File.WriteAllText(path, sb.ToString());
         }
 
         public void Save(string markdown, string path)
         {
-            Save(DataObject,markdown,path);
+            Save(DataObject, markdown, path);
         }
 
 
@@ -170,7 +167,7 @@ namespace EPS.Extensions.YamlMarkdown
         /// Gets the parsed Markdown from the YAML/Markdown file.
         /// </summary>
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
-        public string Html{get;set;}
+        public string Html { get; set; }
 
     }
 }
