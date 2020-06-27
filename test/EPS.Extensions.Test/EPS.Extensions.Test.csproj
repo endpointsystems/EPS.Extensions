@@ -18,6 +18,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\EPS.Extensions.SiteMapIndex\EPS.Extensions.SiteMapIndex.csproj" />
+      <ProjectReference Include="..\..\EPS.Extensions.Unique\EPS.Extensions.Unique.csproj" />
       <ProjectReference Include="..\..\EPS.Extensions.YamlMarkdown\EPS.Extensions.YamlMarkdown.csproj" />
     </ItemGroup>
 

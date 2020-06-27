@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <PackageVersion>0.8.0</PackageVersion>
+        <PackageVersion>0.9.0</PackageVersion>
         <Title>YamlMarkdown - Markdown with YAML front-matter</Title>
         <Description>If you've ever worked on an app and you needed quick access to something that can read a Markdown file with YAML front-matter, then this is your library. Using YamlDotNet and Markdig, we take your YAML object, serialize it for you, and give you Markdown and parsed HTML for your page data. </Description>
         <PackageProjectUrl>https://github.com/endpointsystems/EPS.Extensions</PackageProjectUrl>
@@ -9,9 +9,10 @@
         <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <PackageTags>Markdown, YAML, YAML front-end</PackageTags>
-        <PackageReleaseNotes>Added a YamlRaw object for unparsed message bodies.</PackageReleaseNotes>
+        <PackageReleaseNotes>package updates</PackageReleaseNotes>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <TargetFramework>netcoreapp3.1</TargetFramework>
+        <PackageIconUrl>https://res.cloudinary.com/endpoint-systems/image/upload/v1580768327/ES_ico_nkoihx.png</PackageIconUrl>
     </PropertyGroup>
 
     <ItemGroup>

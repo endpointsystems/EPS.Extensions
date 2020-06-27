@@ -8,6 +8,8 @@ Here's what we've got so far:
 
 Create friendly slugs/URLs from text containing European and other non-URL friendly characters. The inspiration for this library came from [Johan Boström's blog](https://www.johanbostrom.se/blog/how-to-create-a-url-and-seo-friendly-string-in-csharp-text-to-slug-generator/). He's got a GitHub with this code, but it's a simple executable demonstrating its usability. Now we've got a NuGet package for it. 
 
+NuGet package can be found [here](https://www.nuget.org/packages/EPS.Extensions.UrlFriendly/).
+
 ## YamlMarkdown
 
 One simple class with one simple function - parsing Markdown files with YAML front-end matter in them. Code for this came from [Mark Heath's blog](https://markheath.net/post/markdown-html-yaml-front-matter) where he talks about doing it and gives a bit of context. I spent some time trying to find something that already worked before spending a good couple of hours making it all work. 
@@ -32,5 +34,15 @@ var convertedMd = html.ToMarkdown();
 ```
 Now you can effortlessly switch between the two.
 
+NuGet package can be found [here](https://www.nuget.org/packages/EPS.Extensions.YamlMarkdown/).
+
 ## SiteMapIndex
-When you have thousands of URLs in your project, organizing them into site maps is crucial for search engine indexing. This project helps you build site maps and site map indexes. See the [example project]() for a demonstration of it in action.
+When you have thousands of URLs in your project, organizing them into site maps is crucial for search engine indexing. This project helps you build site maps and site map indexes. See the [example project](https://github.com/endpointsystems/EPS.Extensions/tree/master/samples/EPS.Samples.SiteMapIndex) for a demonstration of it in action. 
+
+NuGet package can be found [here](https://www.nuget.org/packages/EPS.Extensions.SiteMapIndex/).
+
+## Unique
+
+This project is meant to serve as a quick and easy way to generate unique alphanumeric sequences, which can be used for identifiers, passwords or for other purposes. Its functionality is loosely based on the `System.Web.Security.Membership.GeneratePassword` method from the legacy ASP.NET library. 
+
+NuGet package can be found [here](https://www.nuget.org/packages/EPS.Extensions.Unique/) .

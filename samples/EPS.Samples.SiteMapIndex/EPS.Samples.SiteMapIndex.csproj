@@ -5,7 +5,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\EPS.Extensions.SiteMapIndex\EPS.Extensions.SiteMapIndex.csproj" />
+      <ProjectReference Include="..\..\EPS.Extensions.SiteMapIndex\EPS.Extensions.SiteMapIndex.csproj" />
     </ItemGroup>
 
     <ItemGroup>

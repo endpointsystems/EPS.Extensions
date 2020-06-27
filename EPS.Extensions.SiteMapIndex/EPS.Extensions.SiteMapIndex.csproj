@@ -17,6 +17,7 @@
         <RepositoryType>GitHub</RepositoryType>
         <PackageTags>site map, sitemap, site map index, sitemapindex</PackageTags>
         <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
 </Project>

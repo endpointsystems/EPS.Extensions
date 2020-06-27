@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <Title>EPS.Extensions.Unique</Title>
+        <Description>Build unique alphanumeric character string with or without JSON-friendly punctuation characters included.   </Description>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Copyright>2007-2020 Endpoint Systems. All rights reserved.</Copyright>
+        <PackageProjectUrl>https://github.com/endpointsystems/EPS.Extensions</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/endpointsystems/EPS.Extensions/blob/master/LICENSE</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
+        <RepositoryType>GitHub</RepositoryType>
+        <PackageTags>GUID,UUID,uniqueId, GeneratePassword</PackageTags>
+        <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+        <PackageIconUrl>https://res.cloudinary.com/endpoint-systems/image/upload/v1580768327/ES_ico_nkoihx.png</PackageIconUrl>
+    </PropertyGroup>
+
+</Project>
