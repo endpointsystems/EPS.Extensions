@@ -45,4 +45,4 @@ NuGet package can be found [here](https://www.nuget.org/packages/EPS.Extensions.
 
 This project is meant to serve as a quick and easy way to generate unique alphanumeric sequences, which can be used for identifiers, passwords or for other purposes. Its functionality is loosely based on the `System.Web.Security.Membership.GeneratePassword` method from the legacy ASP.NET library. 
 
-NuGet package can be found [here](https://www.nuget.org/packages/EPS.Extensions.Unique/) .
+NuGet package can be found [here](https://www.nuget.org/packages/EPS.Extensions.Unique/) . A sample csx script file can be found in the samples/scripts folder.
