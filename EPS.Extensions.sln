@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPS.Samples.SiteMapIndex", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPS.Extensions.Unique", "EPS.Extensions.Unique\EPS.Extensions.Unique.csproj", "{77ACE206-7AF1-4364-BDEA-E03771BB7251}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPS.Extensions.DynamicTableEntityJsonSerializer", "EPS.Extensions.DynamicTableEntityJsonSerializer\EPS.Extensions.DynamicTableEntityJsonSerializer.csproj", "{AE0DC2D3-6174-4C98-83BE-847173BC2CAA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +54,10 @@ Global
 		{77ACE206-7AF1-4364-BDEA-E03771BB7251}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77ACE206-7AF1-4364-BDEA-E03771BB7251}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77ACE206-7AF1-4364-BDEA-E03771BB7251}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE0DC2D3-6174-4C98-83BE-847173BC2CAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE0DC2D3-6174-4C98-83BE-847173BC2CAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE0DC2D3-6174-4C98-83BE-847173BC2CAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE0DC2D3-6174-4C98-83BE-847173BC2CAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{877632C1-3A2C-4B5B-9B9A-68998FCBC527} = {614D2E51-A7EC-44F4-BE27-79C13894D90D}

@@ -14,6 +14,7 @@
         <PackageLicenseUrl>https://github.com/endpointsystems/EPS.Extensions/blob/master/LICENSE</PackageLicenseUrl>
         <PackageIconUrl>https://endpointsystems.com/favicon.ico</PackageIconUrl>
         <RepositoryType>GitHub</RepositoryType>
+        <PackageProjectUrl>https://endpointsystems.com/blog/</PackageProjectUrl>
     </PropertyGroup>
 
 </Project>

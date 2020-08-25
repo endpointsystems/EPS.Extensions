@@ -46,3 +46,9 @@ NuGet package can be found [here](https://www.nuget.org/packages/EPS.Extensions.
 This project is meant to serve as a quick and easy way to generate unique alphanumeric sequences, which can be used for identifiers, passwords or for other purposes. Its functionality is loosely based on the `System.Web.Security.Membership.GeneratePassword` method from the legacy ASP.NET library. 
 
 NuGet package can be found [here](https://www.nuget.org/packages/EPS.Extensions.Unique/) . A sample csx script file can be found in the samples/scripts folder.
+
+## DynamicTableEntityJsonSerializer
+
+This project is a slight variation of the [DynamicTableEntityJsonSerializer](https://www.nuget.org/packages/DynamicTableEntityJsonSerializer/) package put together by [DoguArslan](https://www.nuget.org/profiles/DoguArslan) on NuGet. The only difference between his package - and ours - is that his serializes fields to explicit objects with the EdmType included, while we make ours into simple properties that allow the entity to be converted into an [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=netcore-3.1) so its properties can be accessed.
+
+

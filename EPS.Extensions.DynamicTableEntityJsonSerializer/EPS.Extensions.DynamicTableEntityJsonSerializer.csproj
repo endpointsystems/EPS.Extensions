@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <Title>DynamicTableEntity JsonSerializer</Title>
+        <Description>Allows the deserialization of a DynamicTableEntity object from Azure Table Storage for conversion into an ExpandoObject. </Description>
+        <Copyright>2020 Endpoint Systems. All rights reserved.</Copyright>
+        <PackageProjectUrl>https://endpointsystems.com/blog/</PackageProjectUrl>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageLicenseUrl>https://github.com/endpointsystems/EPS.Extensions/blob/master/LICENSE</PackageLicenseUrl>
+        <PackageIconUrl>https://res.cloudinary.com/endpoint-systems/image/upload/v1580768327/ES_ico_nkoihx.png</PackageIconUrl>
+        <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
+        <RepositoryType>GitHub</RepositoryType>
+        <PackageTags>Azure, Table Storage, ExpandoObject, DynamicTableEntity, JsonSerializer</PackageTags>
+        <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+        <Authors>endpointsystems</Authors>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Azure.Cosmos.Table" Version="1.0.8" />
+      <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    </ItemGroup>
+
+</Project>
