@@ -1,4 +1,4 @@
-namespace EPS.Extensions.GraphObjects
+namespace EPS.Extensions.B2CGraphUtil
 {
     /// <summary>
     /// Allows an application to define and use a set of additional properties that can be added

@@ -1,4 +1,4 @@
-namespace EPS.Extensions.GraphObjects
+namespace EPS.Extensions.B2CGraphUtil
 {
     /// <summary>
     /// Represents a CNAME record which needs to be added to the DNS zone file of a particular domain in the tenant. Inherited from <see cref="DomainDnsRecord"/>

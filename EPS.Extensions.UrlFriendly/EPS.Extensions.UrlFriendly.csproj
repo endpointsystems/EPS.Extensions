@@ -1,20 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <TargetFramework>net5.0</TargetFramework>
         <Title>UrlFriendly</Title>
         <Authors>endpointsystems</Authors>
         <Description>Taken from Johan Bostrom's blog, this code helps normalize characters to SEO and URL-friendly content, removing spaces, diacritics and international characters.</Description>
         <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
         <PackageTags>SEO, url, text</PackageTags>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageLicense>https://github.com/endpointsystems/EPS.Extensions/blob/master/LICENSE</PackageLicense>
-        <PackageReleaseNotes>Added string extension</PackageReleaseNotes>
-        <PackageVersion>1.0.1</PackageVersion>
-        <PackageLicenseUrl>https://github.com/endpointsystems/EPS.Extensions/blob/master/LICENSE</PackageLicenseUrl>
-        <PackageIconUrl>https://endpointsystems.com/favicon.ico</PackageIconUrl>
+        <PackageReleaseNotes>Update to .NET 5, change version to reflect</PackageReleaseNotes>
+        <PackageVersion>5.0.0</PackageVersion>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageIcon>icon.png</PackageIcon>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <RepositoryType>GitHub</RepositoryType>
-        <PackageProjectUrl>https://endpointsystems.com/blog/</PackageProjectUrl>
+        <PackageProjectUrl>https://endpointsystems.com/blog/eps-extensions-nuget-packages</PackageProjectUrl>
     </PropertyGroup>
+    <ItemGroup>
+      <None Update="icon.png">
+        <Pack>true</Pack>
+        <Visible>false</Visible>
+        <PackagePath>/</PackagePath>
+      </None>
+    </ItemGroup>
 
 </Project>

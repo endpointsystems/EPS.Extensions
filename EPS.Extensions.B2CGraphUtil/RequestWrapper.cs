@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace EPS.Extensions.GraphObjects
+namespace EPS.Extensions.B2CGraphUtil
 {
     public class GroupWrapper<T>
     {

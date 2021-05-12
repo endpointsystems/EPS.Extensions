@@ -1,4 +1,4 @@
-namespace EPS.Extensions.GraphObjects
+namespace EPS.Extensions.B2CGraphUtil
 {
     /// <summary>
     /// The provisionedPlans property of the <see cref="User"/> entity and the TenantDetail entity is a

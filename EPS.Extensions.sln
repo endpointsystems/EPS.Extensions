@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPS.Extensions.UrlFriendly"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPS.Extensions.YamlMarkdown", "EPS.Extensions.YamlMarkdown\EPS.Extensions.YamlMarkdown.csproj", "{9B716A00-56E6-4C80-817B-B56C5C468C9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPS.Extensions.GraphObjects", "EPS.Extensions.GraphObjects\EPS.Extensions.GraphObjects.csproj", "{FC264E9A-76D1-45E9-812B-F5BB7B568A60}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPS.Extensions.B2CGraphUtil", "EPS.Extensions.B2CGraphUtil\EPS.Extensions.B2CGraphUtil.csproj", "{FC264E9A-76D1-45E9-812B-F5BB7B568A60}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{7E7F5CF7-46F8-4287-A6AB-E6758E255B7B}"
 EndProject

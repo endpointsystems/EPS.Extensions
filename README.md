@@ -53,3 +53,5 @@ This project is a slight variation of the [DynamicTableEntityJsonSerializer](htt
 
 NuGet package can be found [here](https://www.nuget.org/packages/EPS.Extensions.DynamicTableEntityJsonSerializer/).
 
+## B2CGraphUtil
+

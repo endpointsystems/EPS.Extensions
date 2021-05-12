@@ -2,7 +2,7 @@ using System;
 using System.Security.Principal;
 using Newtonsoft.Json.Linq;
 
-namespace EPS.Extensions.GraphObjects
+namespace EPS.Extensions.B2CGraphUtil
 {
     /// <summary>
     /// Represents an organizational contact. Inherits from <see cref="DirectoryObject"/>.

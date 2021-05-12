@@ -1,6 +1,6 @@
 
 //https://docs.microsoft.com/en-us/previous-versions/azure/ad/graph/api/entity-and-complex-type-reference#directoryobject-entity
-namespace EPS.Extensions.GraphObjects
+namespace EPS.Extensions.B2CGraphUtil
 {
     /// <summary>
     /// Represents an Azure AD directory role. Azure AD directory roles are also known as

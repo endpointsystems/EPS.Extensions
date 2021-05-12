@@ -1,4 +1,4 @@
-namespace EPS.Extensions.GraphObjects
+namespace EPS.Extensions.B2CGraphUtil
 {
     /// <summary>
     /// For each domain in the tenant, you may be required to add DNS record(s) to the DNS

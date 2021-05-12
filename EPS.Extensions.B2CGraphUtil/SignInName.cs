@@ -1,4 +1,4 @@
-namespace EPS.Extensions.GraphObjects
+namespace EPS.Extensions.B2CGraphUtil
 {
     /// <summary>
     /// Contains information about a sign-in name of a local account user in an Azure Active Directory B2C

@@ -1,18 +1,27 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <TargetFramework>net5.0</TargetFramework>
         <Title>EPS.Extensions.Unique</Title>
         <Description>Build unique alphanumeric character string with or without JSON-friendly punctuation characters included.   </Description>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Copyright>2007-2020 Endpoint Systems. All rights reserved.</Copyright>
-        <PackageProjectUrl>https://github.com/endpointsystems/EPS.Extensions</PackageProjectUrl>
-        <PackageLicenseUrl>https://github.com/endpointsystems/EPS.Extensions/blob/master/LICENSE</PackageLicenseUrl>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://endpointsystems.com/blog/eps-extensions-nuget-packages</PackageProjectUrl>
+        <PackageReleaseNotes>upgrade to .NET 5</PackageReleaseNotes>
+        <PackageTags>GUID,UUID,uniqueId, GeneratePassword</PackageTags>
+        <PackageVersion>5.0.0</PackageVersion>
         <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
-        <PackageTags>GUID,UUID,uniqueId, GeneratePassword</PackageTags>
-        <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
-        <PackageIconUrl>https://res.cloudinary.com/endpoint-systems/image/upload/v1580768327/ES_ico_nkoihx.png</PackageIconUrl>
     </PropertyGroup>
+
+    <ItemGroup>
+        <None Update="icon.png">
+            <Pack>true</Pack>
+            <Visible>false</Visible>
+            <PackagePath>/</PackagePath>
+        </None>
+    </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 using System;
 
-namespace EPS.Extensions.GraphObjects
+namespace EPS.Extensions.B2CGraphUtil
 {
     /// <summary>
     /// The assignedPlans property of both the User entity and the TenantDetail entity is a collection of AssignedPlan.

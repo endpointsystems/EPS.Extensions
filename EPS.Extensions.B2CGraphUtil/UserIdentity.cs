@@ -1,4 +1,4 @@
-namespace EPS.Extensions.GraphObjects
+namespace EPS.Extensions.B2CGraphUtil
 {
     /// <summary>
     /// Contains information about a identity of a social account user in an Azure Active Directory B2C tenant. The userIdentities property of the User entity is a collection of userIdentity. For more information about Azure Active Directory B2C, see the Azure Active Directory B2C documentation.

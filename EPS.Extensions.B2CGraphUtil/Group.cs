@@ -1,6 +1,6 @@
 using System;
 
-namespace EPS.Extensions.GraphObjects
+namespace EPS.Extensions.B2CGraphUtil
 {
     /// <summary>
     ///

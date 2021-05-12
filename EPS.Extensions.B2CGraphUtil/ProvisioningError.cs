@@ -1,6 +1,6 @@
 using System;
 
-namespace EPS.Extensions.GraphObjects
+namespace EPS.Extensions.B2CGraphUtil
 {
     /// <summary>
     /// The provisioningErrors property of the Contact, User, and Group entities is a collection of ProvisioningError.
