@@ -6,21 +6,21 @@ namespace EPS.Extensions.Test.Types
     {
         public DateTime Updated { get; set; }
         public DateTime Published { get; set; }
-        public string Title { get; set; }
+        public string Title { get; set; } = null!;
 
         //for Algolia
-        public string[] ids { get; set; }
+        public string[] ids { get; set; } = null!;
 
-        public string slug { get; set; }
-        public string Description { get; set; }
+        public string slug { get; set; } = null!;
+        public string Description { get; set; } = null!;
 
         //save the original image ID
-        public string Image { get; set; }
-        public string body { get; set; }
-        public string Keywords { get; set; }
-        public string[] Categories { get; set; }
+        public string Image { get; set; } = null!;
+        public string body { get; set; } = null!;
+        public string Keywords { get; set; } = null!;
+        public string[] Categories { get; set; } = null!;
 
-        public string author { get; set; }
+        public string author { get; set; } = null!;
 
     }
 }

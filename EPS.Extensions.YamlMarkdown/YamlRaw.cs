@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Text;
 using YamlDotNet.Core;
@@ -13,8 +14,8 @@ namespace EPS.Extensions.YamlMarkdown
     /// <typeparam name="T">The data type to deserialize from the YAML.</typeparam>
     public class YamlRaw<T> where T: new()
     {
-        private IDeserializer yaml;
-        private ISerializer yamlSerializer;
+        private IDeserializer yaml = null!;
+        private ISerializer yamlSerializer = null!;
 
         public YamlRaw()
         {
@@ -115,7 +116,7 @@ namespace EPS.Extensions.YamlMarkdown
         /// </remarks>
         public void Save(T obj, string content, string path)
         {
-            var y = yamlSerializer.Serialize(obj);
+            var y = yamlSerializer.Serialize(obj ?? throw new ArgumentNullException(nameof(obj)));
             var sb = new StringBuilder();
             sb.AppendLine("---");
             sb.Append(y);
@@ -129,10 +130,10 @@ namespace EPS.Extensions.YamlMarkdown
             Save(DataObject,content,path);
         }
 
-        public string Content { get; set; }
+        public string Content { get; set; } = null!;
 
-        public string FileName { get; set; }
-        public string FilePath { get; set; }
-        public T DataObject { get; set; }
+        public string FileName { get; set; } = null!;
+        public string FilePath { get; set; } = null!;
+        public T DataObject { get; set; } = default!;
     }
 }

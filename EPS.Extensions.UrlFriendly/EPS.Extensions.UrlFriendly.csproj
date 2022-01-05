@@ -1,22 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
         <Title>UrlFriendly</Title>
         <Authors>endpointsystems</Authors>
         <Description>Taken from Johan Bostrom's blog, this code helps normalize characters to SEO and URL-friendly content, removing spaces, diacritics and international characters.</Description>
         <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
         <PackageTags>SEO, url, text</PackageTags>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageReleaseNotes>Update to .NET 5, change version to reflect</PackageReleaseNotes>
-        <PackageVersion>5.0.0</PackageVersion>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageReleaseNotes>Update to .NET 6</PackageReleaseNotes>
+        <PackageVersion>6.0.0</PackageVersion>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageIcon>icon.png</PackageIcon>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <RepositoryType>GitHub</RepositoryType>
         <PackageProjectUrl>https://endpointsystems.com/blog/eps-extensions-nuget-packages</PackageProjectUrl>
+        <LangVersion>10</LangVersion>
     </PropertyGroup>
     <ItemGroup>
+        <None Update="README.md">
+            <Pack>true</Pack>
+            <PackagePath>/</PackagePath>
+        </None>
       <None Update="icon.png">
         <Pack>true</Pack>
         <Visible>false</Visible>

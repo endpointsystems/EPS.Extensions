@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Xml;
 using EPS.Extensions.SiteMapIndex;
 using Machine.Specifications;
+// ReSharper disable AsyncVoidLambda
 
 namespace EPS.Extensions.Test.SiteMapIndex
 {
     public class SiteMapTestBase
     {
-        protected static SiteMap siteMap;
-        protected static SiteMapConfig config;
+        protected static SiteMap siteMap = null!;
+        protected static SiteMapConfig config = null!;
     }
     public class sitemap_test: SiteMapTestBase
     {
@@ -20,6 +21,7 @@ namespace EPS.Extensions.Test.SiteMapIndex
             siteMap = new SiteMap(new Uri("https://my.superlong.fancy.website.com/sitemap.xml"));
         };
 
+        // ReSharper disable once AsyncVoidLambda
         protected It should_generate_a_site_map = async () =>
         {
             await using var ms = await siteMap.Parse(() =>

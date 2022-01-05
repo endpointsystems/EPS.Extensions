@@ -1,26 +1,33 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <PackageVersion>5.0.0</PackageVersion>
+        <PackageVersion>6.0.0</PackageVersion>
         <Title>YamlMarkdown - Markdown with YAML front-matter</Title>
         <Description>If you've ever worked on an app and you needed quick access to something that can read a Markdown file with YAML front-matter, then this is your library. Using YamlDotNet and Markdig, we take your YAML object, serialize it for you, and give you Markdown and parsed HTML for your page data. </Description>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageProjectUrl>https://endpointsystems.com/blog/eps-extensions-nuget-packages</PackageProjectUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
-        <PackageTags>Markdown, YAML, YAML front-end</PackageTags>
-        <PackageReleaseNotes>dependency updates, .NET 5 compatibility</PackageReleaseNotes>
+        <PackageTags>Markdown, YAML, YAML front-end, SEO, Markdig, YamlDotNet</PackageTags>
+        <PackageReleaseNotes>.NET 6 compatibility</PackageReleaseNotes>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <TargetFramework>net5.0</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
         <PackageIcon>icon.png</PackageIcon>
+        <LangVersion>10</LangVersion>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Html2Markdown" Version="3.3.1.407" />
-      <PackageReference Include="Markdig" Version="0.21.1" />
-      <PackageReference Include="YamlDotNet" Version="8.1.2" />
+      <PackageReference Include="Html2Markdown" Version="5.0.1.524" />
+      <PackageReference Include="Markdig" Version="0.26.0" />
+      <PackageReference Include="YamlDotNet" Version="11.2.1" />
     </ItemGroup>
     <ItemGroup>
+        <None Update="README.md">
+            <Pack>true</Pack>
+            <PackagePath>/</PackagePath>
+        </None>
         <None Update="icon.png">
             <Pack>true</Pack>
             <Visible>false</Visible>

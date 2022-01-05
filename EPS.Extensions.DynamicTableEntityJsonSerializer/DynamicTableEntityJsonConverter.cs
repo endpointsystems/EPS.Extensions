@@ -11,9 +11,9 @@ namespace EPS.Extensions.DynamicTableEntityJsonSerializer
 {
     public class DynamicTableEntityJsonConverter: JsonConverter
     {
-        private readonly List<string> excludedProperties;
+        private readonly List<string>? excludedProperties;
 
-        public DynamicTableEntityJsonConverter(List<string> excludedProperties = null!)
+        public DynamicTableEntityJsonConverter(List<string>? excludedProperties = null!)
         {
             this.excludedProperties = excludedProperties;
         }
@@ -57,7 +57,7 @@ namespace EPS.Extensions.DynamicTableEntityJsonSerializer
         public override bool CanConvert(Type objectType) => typeof(DynamicTableEntity).IsAssignableFrom(objectType);
 
         private static void WriteJsonProperties(JsonWriter writer, DynamicTableEntity entity,
-            List<string> excludedProperties = null!)
+            List<string>? excludedProperties = null!)
         {
             if (entity == null) return;
             writer.WritePropertyName("PartitionKey");

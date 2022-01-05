@@ -1,15 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
         <AssemblyName>EPS.Extensions.SiteMapIndex</AssemblyName>
         <RootNamespace>EPS.Extensions.SiteMapIndex</RootNamespace>
         <PackageId>EPS.Extensions.SiteMapIndex</PackageId>
-        <PackageVersion>5.0</PackageVersion>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageVersion>6.0</PackageVersion>
         <Authors>endpointsystems</Authors>
         <Title>SiteMapIndex</Title>
         <Description>This package helps build out site maps as well as site map indexes. Designed for use in large projects where multiple site maps are used. </Description>
-        <Copyright>2021 Endpoint Systems. All rights reserved.</Copyright>
+        <Copyright>2022 Endpoint Systems. All rights reserved.</Copyright>
         <PackageProjectUrl>https://endpointsystems.com/blog/eps-extensions-nuget-packages</PackageProjectUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageIcon>icon.png</PackageIcon>
@@ -18,12 +19,17 @@
         <PackageTags>site map, sitemap, site map index, sitemapindex</PackageTags>
         <PackageReleaseNotes>Update to .NET 5, version update to reflect and sync.</PackageReleaseNotes>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>5.0.0</PackageVersion>
+        <PackageVersion>6.0.0</PackageVersion>
+        <LangVersion>10</LangVersion>
     </PropertyGroup>
     <ItemGroup>
         <None Update="icon.png">
             <Pack>true</Pack>
             <Visible>false</Visible>
+            <PackagePath>/</PackagePath>
+        </None>
+        <None Update="README.md">
+            <Pack>true</Pack>
             <PackagePath>/</PackagePath>
         </None>
     </ItemGroup>

@@ -1,6 +1,7 @@
 using EPS.Extensions.Test.Types;
 using EPS.Extensions.YamlMarkdown;
 using Machine.Specifications;
+// ReSharper disable UnusedMember.Local
 
 namespace EPS.Extensions.Test
 {
@@ -9,8 +10,9 @@ namespace EPS.Extensions.Test
         private static string inPath = "test/in/raw_in.md";
         private static string outPath = "test/out/raw_out.md";
 
-        private static YamlRaw<Article> yamlArticle;
-        private static Article article;
+        private static YamlRaw<Article> yamlArticle = null!;
+        private static Article article = null!;
+
 
         private Because of_the_parsing = () =>
         {

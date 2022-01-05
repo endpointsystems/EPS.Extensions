@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Text;
 using Markdig;
 using Markdig.Parsers;
@@ -15,27 +16,27 @@ namespace EPS.Extensions.YamlMarkdown
     /// <typeparam name="T">The data type to deserialize from the YAML.</typeparam>
     public class YamlMarkdown<T> where T : new()
     {
-        private IDeserializer yaml;
-        private ISerializer yamlSerializer;
+        private IDeserializer yaml = null!;
+        private ISerializer yamlSerializer = null!;
 
-        public YamlMarkdown(IDeserializer deserializerBuilder = null)
+        public YamlMarkdown(IDeserializer? deserializerBuilder = null)
         {
             init(deserializerBuilder);
         }
 
-        public YamlMarkdown(string filePath, IDeserializer deserializerBuilder = null) : this(deserializerBuilder)
+        public YamlMarkdown(string filePath, IDeserializer? deserializerBuilder = null) : this(deserializerBuilder)
         {
             Parse(filePath);
         }
 
-        public YamlMarkdown(TextReader reader, IDeserializer deserializerBuilder = null) : this(deserializerBuilder)
+        public YamlMarkdown(TextReader reader, IDeserializer? deserializerBuilder = null) : this(deserializerBuilder)
         {
             Parse(reader);
         }
 
-        private void init(IDeserializer deserializerBuilder = null)
+        private void init(IDeserializer? deserializerBuilder = null)
         {
-            yaml = deserializerBuilder != null ? deserializerBuilder : new DeserializerBuilder().Build();
+            yaml = deserializerBuilder ?? new DeserializerBuilder().Build();
             yamlSerializer = new Serializer();
         }
 
@@ -46,7 +47,7 @@ namespace EPS.Extensions.YamlMarkdown
         /// <returns>The deserialized object.</returns>
         public T Parse(string path)
         {
-            T t;
+            T? t;
             FileName = Path.GetFileNameWithoutExtension(path);
             var text = File.ReadAllText(path);
             using (var input = new StringReader(text))
@@ -83,9 +84,9 @@ namespace EPS.Extensions.YamlMarkdown
         /// </summary>
         /// <param name="textReader">The <see cref="TextReader"/> to deserialize.</param>
         /// <returns></returns>
-        public T Parse(TextReader textReader)
+        public T? Parse(TextReader textReader)
         {
-            T t;
+            T? t;
             var parser = new Parser(textReader);
             parser.Consume<StreamStart>();
             parser.Consume<DocumentStart>();
@@ -119,9 +120,9 @@ namespace EPS.Extensions.YamlMarkdown
         /// <remarks>
         /// This method saves your YAML and content as a YAML-flavored Markdown file.
         /// </remarks>
-        public void Save(T obj, string markdown, string path)
+        public void Save(T? obj, string markdown, string path)
         {
-            var y = yamlSerializer.Serialize(obj);
+            var y = yamlSerializer.Serialize(obj ?? throw new ArgumentNullException(nameof(obj)));
             var sb = new StringBuilder();
             sb.AppendLine("---");
             sb.Append(y);
@@ -155,19 +156,18 @@ namespace EPS.Extensions.YamlMarkdown
             return sb.ToString();
         }
 
-        public string FileName { get; set; }
-        public T DataObject { get; set; }
+        public string FileName { get; set; } = null!;
+        public T? DataObject { get; set; }
 
         /// <summary>
         /// Gets the markdown pulled from the YAML/Markdown file.
         /// </summary>
-        public string Markdown { get; set; }
+        public string Markdown { get; set; } = null!;
 
         /// <summary>
         /// Gets the parsed Markdown from the YAML/Markdown file.
         /// </summary>
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
-        public string Html { get; set; }
-
+        public string Html { get; set; } = null!;
     }
 }

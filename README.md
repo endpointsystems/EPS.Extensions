@@ -55,3 +55,4 @@ NuGet package can be found [here](https://www.nuget.org/packages/EPS.Extensions.
 
 ## B2CGraphUtil
 
+This library lets you perform administrative tasks against Graph objects in your Azure Active Directory B2C directory instance. 

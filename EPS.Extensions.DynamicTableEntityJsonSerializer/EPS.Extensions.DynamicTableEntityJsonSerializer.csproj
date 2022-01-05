@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
         <AssemblyName>EPS.Extensiosn.DynamicTableEntityJsonSerializer</AssemblyName>
         <Authors>endpointsystems</Authors>
         <Copyright>2021 Endpoint Systems. All rights reserved.</Copyright>
@@ -12,11 +12,13 @@
         <PackageIcon>icon.png</PackageIcon>
         <PackageId>EPS.Extensions.DynamicTableEntityJsonSerializer</PackageId>
         <PackageTags>Azure, Table Storage, ExpandoObject, DynamicTableEntity, JsonSerializer</PackageTags>
-        <PackageReleaseNotes>Upgrade to .NET 5.</PackageReleaseNotes>
-        <PackageVersion>5.0.0</PackageVersion>
+        <PackageReleaseNotes>Upgrade to .NET 6.</PackageReleaseNotes>
+        <PackageVersion>6.0.0</PackageVersion>
         <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <Title>DynamicTableEntity JsonSerializer</Title>
+        <LangVersion>10</LangVersion>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
     <ItemGroup>
         <None Update="icon.png">
@@ -28,7 +30,6 @@
 
     <ItemGroup>
       <PackageReference Include="Microsoft.Azure.Cosmos.Table" Version="1.0.8" />
-      <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     </ItemGroup>
 
 </Project>

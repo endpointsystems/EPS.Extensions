@@ -4,11 +4,13 @@ using System.IO;
 using Carter;
 using EPS.Extensions.SiteMapIndex;
 using LazyCache;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Routing;
 
 namespace EPS.Samples.SiteMapIndex.Modules
 {
-    public class SiteMapModule: CarterModule
+    public class SiteMapModule: ICarterModule
     {
         private readonly IAppCache cache;
         public SiteMapModule(IAppCache appCache)
@@ -18,29 +20,6 @@ namespace EPS.Samples.SiteMapIndex.Modules
             cache.GetOrAdd("sitemap2.xml",() => getSiteMap("https://localhost:10623/sitemap2.xml"));
             cache.GetOrAdd("sitemap3.xml",() => getSiteMap("https://localhost:10623/sitemap3.xml"));
             cache.GetOrAdd("sitemap.xml",() => getSiteMapIndex("https://localhost:10623/sitemap.xml"));
-            var list = new List<string>();
-            list.AddRange(new []{"sitemap1.xml","sitemap2.xml","sitemap3.xml","sitemap.xml"});
-            foreach (var item in list)
-            {
-                Get($"/{item}", async (req, resp) =>
-                {
-                    if (item.Equals("sitemap.xml"))
-                    {
-                        var ms = await cache.Get<Extensions.SiteMapIndex.SiteMapIndex>("sitemap.xml").Parse();
-                        resp.ContentType = "application/xml";
-                        resp.StatusCode = 200;
-                        await ms.CopyToAsync(resp.Body);
-                        return;
-                    }
-
-                    var smap = cache.Get<SiteMap>(item);
-                    var ms2 = await smap.Parse();
-                    resp.ContentType = "application/xml";
-                    resp.StatusCode = 200;
-                    await ms2.CopyToAsync(resp.Body);
-                    return;
-                });
-            }
         }
 
         protected ContentResult streamContent(Stream stream)
@@ -78,6 +57,36 @@ namespace EPS.Samples.SiteMapIndex.Modules
 
             smap.Locations = stack;
             return smap;
+        }
+
+        public void AddRoutes(IEndpointRouteBuilder app)
+        {
+            cache.GetOrAdd("sitemap1.xml", () => getSiteMap("https://localhost:10623/sitemap1.xml"));
+            cache.GetOrAdd("sitemap2.xml",() => getSiteMap("https://localhost:10623/sitemap2.xml"));
+            cache.GetOrAdd("sitemap3.xml",() => getSiteMap("https://localhost:10623/sitemap3.xml"));
+            cache.GetOrAdd("sitemap.xml",() => getSiteMapIndex("https://localhost:10623/sitemap.xml"));
+            var list = new List<string>();
+            list.AddRange(new []{"sitemap1.xml","sitemap2.xml","sitemap3.xml","sitemap.xml"});
+            foreach (var item in list)
+            {
+                app.MapGet($"/{item}", async context =>
+                {
+                    if (item.Equals("sitemap.xml"))
+                    {
+                        var ms = await cache.Get<Extensions.SiteMapIndex.SiteMapIndex>("sitemap.xml").Parse();
+                        context.Response.ContentType = "application/xml";
+                        context.Response.StatusCode = 200;
+                        await ms.CopyToAsync(context.Response.Body);
+                        return;
+                    }
+
+                    var smap = cache.Get<SiteMap>(item);
+                    var ms2 = await smap.Parse();
+                    context.Response.ContentType = "application/xml";
+                    context.Response.StatusCode = 200;
+                    await ms2.CopyToAsync(context.Response.Body);
+                });
+            }
         }
     }
 }
