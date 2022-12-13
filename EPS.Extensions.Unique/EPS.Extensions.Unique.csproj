@@ -10,9 +10,9 @@
         <PackageIcon>icon.png</PackageIcon>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://endpointsystems.com/blog/eps-extensions-nuget-packages</PackageProjectUrl>
-        <PackageReleaseNotes>upgrade to .NET 6</PackageReleaseNotes>
+        <PackageReleaseNotes>Dependency updates.</PackageReleaseNotes>
         <PackageTags>GUID,UUID,uniqueId, GeneratePassword</PackageTags>
-        <PackageVersion>6.0.0</PackageVersion>
+        <PackageVersion>6.0.1</PackageVersion>
         <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <LangVersion>10</LangVersion>

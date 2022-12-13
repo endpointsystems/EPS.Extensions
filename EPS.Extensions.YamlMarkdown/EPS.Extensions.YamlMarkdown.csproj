@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <PackageVersion>6.0.0</PackageVersion>
         <Title>YamlMarkdown - Markdown with YAML front-matter</Title>
         <Description>If you've ever worked on an app and you needed quick access to something that can read a Markdown file with YAML front-matter, then this is your library. Using YamlDotNet and Markdig, we take your YAML object, serialize it for you, and give you Markdown and parsed HTML for your page data. </Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -10,7 +9,8 @@
         <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <PackageTags>Markdown, YAML, YAML front-end, SEO, Markdig, YamlDotNet</PackageTags>
-        <PackageReleaseNotes>.NET 6 compatibility</PackageReleaseNotes>
+        <PackageReleaseNotes>Dependency updates</PackageReleaseNotes>
+        <PackageVersion>6.0.1</PackageVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <TargetFramework>net6.0</TargetFramework>
         <PackageIcon>icon.png</PackageIcon>
@@ -19,9 +19,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Html2Markdown" Version="5.0.1.524" />
-      <PackageReference Include="Markdig" Version="0.26.0" />
-      <PackageReference Include="YamlDotNet" Version="11.2.1" />
+      <PackageReference Include="Html2Markdown" Version="5.1.0.703" />
+      <PackageReference Include="Markdig" Version="0.30.4" />
+      <PackageReference Include="YamlDotNet" Version="12.2.0" />
     </ItemGroup>
     <ItemGroup>
         <None Update="README.md">

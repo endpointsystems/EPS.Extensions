@@ -9,8 +9,8 @@
         <PackageTags>SEO, url, text</PackageTags>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageReleaseNotes>Update to .NET 6</PackageReleaseNotes>
-        <PackageVersion>6.0.0</PackageVersion>
+        <PackageReleaseNotes>Dependency updates.</PackageReleaseNotes>
+        <PackageVersion>6.0.1</PackageVersion>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageIcon>icon.png</PackageIcon>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

@@ -17,9 +17,9 @@
         <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <PackageTags>site map, sitemap, site map index, sitemapindex</PackageTags>
-        <PackageReleaseNotes>Update to .NET 5, version update to reflect and sync.</PackageReleaseNotes>
+        <PackageReleaseNotes>Dependency updates.</PackageReleaseNotes>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>6.0.0</PackageVersion>
+        <PackageVersion>6.0.1</PackageVersion>
         <LangVersion>10</LangVersion>
     </PropertyGroup>
     <ItemGroup>
