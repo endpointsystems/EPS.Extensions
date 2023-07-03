@@ -1,25 +1,26 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <AssemblyName>EPS.Extensions.SiteMapIndex</AssemblyName>
         <RootNamespace>EPS.Extensions.SiteMapIndex</RootNamespace>
         <PackageId>EPS.Extensions.SiteMapIndex</PackageId>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageVersion>6.0</PackageVersion>
         <Authors>endpointsystems</Authors>
         <Title>SiteMapIndex</Title>
         <Description>This package helps build out site maps as well as site map indexes. Designed for use in large projects where multiple site maps are used. </Description>
-        <Copyright>2022 Endpoint Systems. All rights reserved.</Copyright>
+        <Copyright>2023 Endpoint Systems. All rights reserved.</Copyright>
         <PackageProjectUrl>https://endpointsystems.com/blog/eps-extensions-nuget-packages</PackageProjectUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageIcon>icon.png</PackageIcon>
         <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <PackageTags>site map, sitemap, site map index, sitemapindex</PackageTags>
-        <PackageReleaseNotes>Dependency updates.</PackageReleaseNotes>
+        <PackageReleaseNotes>In this release we've introduced the LocationBuilder class for speeding up the process of building pages.
+
+            The SiteMap class now has a Load function which uses the LocationBuilder class to quickly add pages to the `Locations` stack.
+        </PackageReleaseNotes>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>6.0.1</PackageVersion>
+        <PackageVersion>6.1.0</PackageVersion>
         <LangVersion>10</LangVersion>
     </PropertyGroup>
     <ItemGroup>
