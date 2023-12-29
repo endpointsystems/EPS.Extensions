@@ -71,7 +71,7 @@ namespace EPS.Extensions.YamlMarkdown
                 }
 
                 parser.Consume<DocumentEnd>();
-                Markdown = input.ReadToEnd();
+                Markdown = text.Substring(text.IndexOf("---\n", StringComparison.Ordinal)+4).Trim();
                 Html = Render(Markdown);
             }
 
@@ -84,7 +84,7 @@ namespace EPS.Extensions.YamlMarkdown
         /// </summary>
         /// <param name="textReader">The <see cref="TextReader"/> to deserialize.</param>
         /// <returns></returns>
-        public T? Parse(TextReader textReader)
+        public T Parse(TextReader textReader)
         {
             T? t;
             var parser = new Parser(textReader);

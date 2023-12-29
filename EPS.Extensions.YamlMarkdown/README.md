@@ -25,3 +25,21 @@ Console.WriteLine(parser.Markdown);
 Console.WriteLine(parser.Html);
 
 ```
+
+The YAML markup at the top of your Markdown file **must** end with three dashes and a newline before your Markdown starts in order for this to work. 
+
+Example:
+```yaml
+Title: Blog title
+Description: "Blog description."
+Published: 10/3/2019
+Updated: 05/07/2020
+Keywords: this, that, something else
+Image: https://res.cloudinary.com/endpoint-systems/image/upload/v1548616596/gae_qlaf4t.png
+Categories: 
+    - Category1
+    - Category2
+--- 
+
+(blog post here)
+```
