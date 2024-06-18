@@ -9,19 +9,19 @@
         <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <PackageTags>Markdown, YAML, YAML front-end, SEO, Markdig, YamlDotNet</PackageTags>
-        <PackageReleaseNotes>Major bug fix with the Markdown output.</PackageReleaseNotes>
-        <PackageVersion>6.1.0</PackageVersion>
+        <PackageReleaseNotes>update to .NET 8</PackageReleaseNotes>
+        <PackageVersion>8.0.0</PackageVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <TargetFramework>net6.0</TargetFramework>
         <PackageIcon>icon.png</PackageIcon>
         <LangVersion>10</LangVersion>
         <Nullable>enable</Nullable>
+        <TargetFramework>net8.0</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Html2Markdown" Version="5.1.0.703" />
-      <PackageReference Include="Markdig" Version="0.34.0" />
-      <PackageReference Include="YamlDotNet" Version="13.7.1" />
+      <PackageReference Include="Html2Markdown" Version="6.2.1.4" />
+      <PackageReference Include="Markdig" Version="0.37.0" />
+      <PackageReference Include="YamlDotNet" Version="15.3.0" />
     </ItemGroup>
     <ItemGroup>
         <None Update="README.md">

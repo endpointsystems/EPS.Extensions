@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <Title>EPS.Extensions.Unique</Title>
         <Description>Build unique alphanumeric character string with or without JSON-friendly punctuation characters included.   </Description>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -10,9 +10,9 @@
         <PackageIcon>icon.png</PackageIcon>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://endpointsystems.com/blog/eps-extensions-nuget-packages</PackageProjectUrl>
-        <PackageReleaseNotes>Dependency updates.</PackageReleaseNotes>
+        <PackageReleaseNotes>Dependency updates, upgrade to net8.0</PackageReleaseNotes>
         <PackageTags>GUID,UUID,uniqueId, GeneratePassword</PackageTags>
-        <PackageVersion>6.0.1</PackageVersion>
+        <PackageVersion>8.0.0</PackageVersion>
         <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <LangVersion>10</LangVersion>

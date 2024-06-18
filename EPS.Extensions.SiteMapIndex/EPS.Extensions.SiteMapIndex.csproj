@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <AssemblyName>EPS.Extensions.SiteMapIndex</AssemblyName>
         <RootNamespace>EPS.Extensions.SiteMapIndex</RootNamespace>
         <PackageId>EPS.Extensions.SiteMapIndex</PackageId>
@@ -15,12 +15,9 @@
         <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <PackageTags>site map, sitemap, site map index, sitemapindex</PackageTags>
-        <PackageReleaseNotes>In this release we've introduced the LocationBuilder class for speeding up the process of building pages.
-
-            The SiteMap class now has a Load function which uses the LocationBuilder class to quickly add pages to the `Locations` stack.
-        </PackageReleaseNotes>
+        <PackageReleaseNotes>upgrade to net8.0</PackageReleaseNotes>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>6.1.0</PackageVersion>
+        <PackageVersion>8.0.0</PackageVersion>
         <LangVersion>10</LangVersion>
     </PropertyGroup>
     <ItemGroup>

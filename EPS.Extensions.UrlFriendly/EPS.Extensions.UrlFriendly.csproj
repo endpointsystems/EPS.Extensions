@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <Title>UrlFriendly</Title>
         <Authors>endpointsystems</Authors>
         <Description>Taken from Johan Bostrom's blog, this code helps normalize characters to SEO and URL-friendly content, removing spaces, diacritics and international characters.</Description>
@@ -9,8 +9,8 @@
         <PackageTags>SEO, url, text</PackageTags>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageReleaseNotes>Dependency updates.</PackageReleaseNotes>
-        <PackageVersion>6.0.1</PackageVersion>
+        <PackageReleaseNotes>Dependency updates, upgrade to net8.0</PackageReleaseNotes>
+        <PackageVersion>8.0.0</PackageVersion>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageIcon>icon.png</PackageIcon>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
