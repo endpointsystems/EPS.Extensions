@@ -10,9 +10,9 @@
         <PackageIcon>icon.png</PackageIcon>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://endpointsystems.com/blog/eps-extensions-nuget-packages</PackageProjectUrl>
-        <PackageReleaseNotes>Dependency updates, upgrade to net8.0</PackageReleaseNotes>
+        <PackageReleaseNotes>Add two new methods to give random uppercase and lowercase characters.</PackageReleaseNotes>
         <PackageTags>GUID,UUID,uniqueId, GeneratePassword</PackageTags>
-        <PackageVersion>8.0.0</PackageVersion>
+        <PackageVersion>8.0.1</PackageVersion>
         <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <LangVersion>10</LangVersion>
