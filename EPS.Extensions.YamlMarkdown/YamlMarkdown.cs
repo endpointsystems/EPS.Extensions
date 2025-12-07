@@ -71,7 +71,15 @@ namespace EPS.Extensions.YamlMarkdown
                 }
 
                 parser.Consume<DocumentEnd>();
-                Markdown = text.Substring(text.IndexOf("---\n", StringComparison.Ordinal)+4).Trim();
+                            // YAML delimiter
+
+                string ss = "---"+Environment.NewLine;
+                // move past first one
+                string skipfidx = text.Substring(text.IndexOf(ss) + ss.Length);
+                // index past second one
+                int lidx = skipfidx.IndexOf(ss)+ss.Length;
+                // Markdown text after second delimiter
+                Markdown = skipfidx.Substring(lidx);
                 Html = Render(Markdown);
             }
 

@@ -10,18 +10,18 @@
         <RepositoryType>GitHub</RepositoryType>
         <PackageTags>Markdown, YAML, YAML front-end, SEO, Markdig, YamlDotNet</PackageTags>
         <PackageReleaseNotes>update to .NET 8</PackageReleaseNotes>
-        <PackageVersion>8.0.0</PackageVersion>
+        <PackageVersion>8.1.0</PackageVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageIcon>icon.png</PackageIcon>
-        <LangVersion>10</LangVersion>
+        <LangVersion>default</LangVersion>
         <Nullable>enable</Nullable>
         <TargetFramework>net8.0</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Html2Markdown" Version="6.2.1.4" />
-      <PackageReference Include="Markdig" Version="0.37.0" />
-      <PackageReference Include="YamlDotNet" Version="15.3.0" />
+      <PackageReference Include="Html2Markdown" Version="7.1.1.19" />
+      <PackageReference Include="Markdig" Version="0.44.0" />
+      <PackageReference Include="YamlDotNet" Version="16.3.0" />
     </ItemGroup>
     <ItemGroup>
         <None Update="README.md">

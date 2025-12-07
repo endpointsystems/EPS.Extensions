@@ -67,7 +67,7 @@ namespace EPS.Samples.SiteMapIndex
                 endpoints.MapRazorPages();
                 endpoints.MapGet("/routes", request =>
                 {
-                    request.Response.Headers.Add("content-type", "application/json");
+                    request.Response.Headers.Append("content-type", "application/json");
 
                     var ep = endpoints.DataSources.First().Endpoints.Select(e => e as RouteEndpoint);
                     return request.Response.WriteAsync(
