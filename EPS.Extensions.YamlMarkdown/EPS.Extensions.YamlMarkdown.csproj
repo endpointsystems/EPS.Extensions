@@ -9,30 +9,23 @@
         <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <PackageTags>Markdown, YAML, YAML front-end, SEO, Markdig, YamlDotNet</PackageTags>
-        <PackageReleaseNotes>update to .NET 8</PackageReleaseNotes>
-        <PackageVersion>8.1.0</PackageVersion>
+        <PackageReleaseNotes>update to .NET 10</PackageReleaseNotes>
+        <PackageVersion>10.0.0</PackageVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageIcon>icon.png</PackageIcon>
-        <LangVersion>default</LangVersion>
+        <LangVersion>13</LangVersion>
         <Nullable>enable</Nullable>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Html2Markdown" Version="7.1.1.19" />
+      <PackageReference Include="Html2Markdown" Version="7.1.2.20" />
       <PackageReference Include="Markdig" Version="0.44.0" />
       <PackageReference Include="YamlDotNet" Version="16.3.0" />
     </ItemGroup>
     <ItemGroup>
-        <None Update="README.md">
-            <Pack>true</Pack>
-            <PackagePath>/</PackagePath>
-        </None>
-        <None Update="icon.png">
-            <Pack>true</Pack>
-            <Visible>false</Visible>
-            <PackagePath>/</PackagePath>
-        </None>
+        <None Include="README.md" Pack="true" PackagePath="/" />
+        <None Include="icon.png" Pack="true" PackagePath="/" Visible="false" />
     </ItemGroup>
 
 </Project>

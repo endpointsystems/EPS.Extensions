@@ -7,11 +7,11 @@ namespace EPS.Extensions.SiteMapIndex;
 /// </summary>
 public class LocationBuilder
 {
-    private static string basePath;
+    private readonly string _basePath;
+    
     public LocationBuilder(string baseUrl)
     {
-        basePath = baseUrl;
-        if (!basePath.EndsWith("/")) basePath += "/";
+        _basePath = baseUrl.EndsWith('/') ? baseUrl : baseUrl + "/";
     }
 
     /// <summary>
@@ -65,15 +65,15 @@ public class LocationBuilder
     private Location build(string relativePath, DateTime lastModified, double priority,
         ChangeFrequency changeFrequency)
     {
-        if (relativePath.StartsWith("/"))
-            relativePath = relativePath.Substring(1, relativePath.Length - 1);
+        if (relativePath.StartsWith('/'))
+            relativePath = relativePath[1..];
             
         return new Location
         {
             Frequency = changeFrequency,
             Priority = priority,
             LastMod = lastModified,
-            Url = basePath + relativePath
+            Url = _basePath + relativePath
         };
     }
 }

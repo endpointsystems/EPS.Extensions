@@ -25,8 +25,8 @@ public class SiteMap
         SiteMapPath = siteMapPath;
         config = new SiteMapConfig
         {
-            maxFileSize = 0,
-            maxLocationCount = 0
+            MaxFileSize = 0,
+            MaxLocationCount = 0
         };
     }
 
@@ -54,8 +54,8 @@ public class SiteMap
         if (!stayCompliant) return;
         config = new SiteMapConfig
         {
-            maxFileSize = 50000000,
-            maxLocationCount = 50000
+            MaxFileSize = 50000000,
+            MaxLocationCount = 50000
         };
     }
 
@@ -123,49 +123,49 @@ public class SiteMap
         //         $"Location count is {stack.Count} exceeding max location count of {config.maxLocationCount}");
 
         var ms = new MemoryStream();
-        var writer = XmlWriter.Create(ms,
+        await using var writer = XmlWriter.Create(ms,
             new XmlWriterSettings
             {
                 Async = true, Encoding = Encoding.UTF8, NewLineHandling = NewLineHandling.None,
                 OmitXmlDeclaration = false, NewLineOnAttributes = false, Indent = false,
-                WriteEndDocumentOnClose = true,CloseOutput = false,NewLineChars = string.Empty,
+                WriteEndDocumentOnClose = true, CloseOutput = false, NewLineChars = string.Empty,
                 IndentChars = string.Empty
             });
-        writer.WriteStartElement("urlset",Constants.URLSET);
+        await writer.WriteStartElementAsync(null, "urlset", Constants.URLSET);
         fileSize += 61; //urlset plus namespace
 
-        int longestLine = 0;
-        int urlCount = 0;
+        var longestLine = 0;
+        var urlCount = 0;
 
         while (stack.Count > 0)
         {
-            writer.WriteStartElement("url");
+            await writer.WriteStartElementAsync(null, "url", null);
             // counts include all open and close tags for XML
             fileSize += 5;
-            int lineSize = 5;
+            var lineSize = 5;
             var loc = stack.Pop();
-            await writer.WriteElementStringAsync(string.Empty,"loc",String.Empty, loc.Url);
+            await writer.WriteElementStringAsync(null, "loc", null, loc.Url);
 
             fileSize += 11 + loc.Url.Length; //loc
             lineSize += 11 + loc.Url.Length;
 
             if (loc.LastMod > DateTime.MinValue)
             {
-                await writer.WriteElementStringAsync(
-                    string.Empty, "lastmod", string.Empty, loc.LastMod.ToString("yyyy-MM-dd"));
+                await writer.WriteElementStringAsync(null, "lastmod", null, loc.LastMod.ToString("yyyy-MM-dd"));
                 fileSize += 29;
                 lineSize += 29;
             }
-            await writer.WriteElementStringAsync(
-                string.Empty, "changefreq", string.Empty, loc.Frequency.ToString().ToLower());
+            
+            var frequencyStr = loc.Frequency.ToString().ToLowerInvariant();
+            await writer.WriteElementStringAsync(null, "changefreq", null, frequencyStr);
 
-            fileSize += 25 + loc.Frequency.ToString().Length;
-            lineSize += 25 + loc.Frequency.ToString().Length;
+            fileSize += 25 + frequencyStr.Length;
+            lineSize += 25 + frequencyStr.Length;
 
             if (loc.Priority > 0.0)
             {
-                await writer.WriteElementStringAsync(
-                    string.Empty, "priority", string.Empty, loc.Priority.ToString("0.#",CultureInfo.CurrentCulture));
+                await writer.WriteElementStringAsync(null, "priority", null, 
+                    loc.Priority.ToString("0.#", CultureInfo.InvariantCulture));
                 fileSize += 24;
                 lineSize += 24;
             }
@@ -182,11 +182,11 @@ public class SiteMap
             if (lineSize > longestLine) longestLine = lineSize;
 
             // if we're going to leak over we should stop now
-            if (config.maxLocationCount > 0 && urlCount >= config.maxLocationCount) break;
-            if (config.maxFileSize > 0 && fileSize + longestLine > config.maxFileSize) break;
+            if (config.MaxLocationCount > 0 && urlCount >= config.MaxLocationCount) break;
+            if (config.MaxFileSize > 0 && fileSize + longestLine > config.MaxFileSize) break;
         }
         await writer.WriteEndElementAsync();
-        writer.Close();
+        await writer.FlushAsync();
         ms.Seek(0, SeekOrigin.Begin);
         return ms;
     }

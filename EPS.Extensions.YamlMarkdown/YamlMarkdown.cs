@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Text;
 using Markdig;
@@ -8,174 +8,173 @@ using YamlDotNet.Core;
 using YamlDotNet.Core.Events;
 using YamlDotNet.Serialization;
 
-namespace EPS.Extensions.YamlMarkdown
+namespace EPS.Extensions.YamlMarkdown;
+
+/// <summary>
+/// Deserialize the YAML and return the Markdown and HTML.
+/// </summary>
+/// <typeparam name="T">The data type to deserialize from the YAML.</typeparam>
+public class YamlMarkdown<T> where T : new()
 {
-    /// <summary>
-    /// Deserialize the YAML and return the Markdown and HTML.
-    /// </summary>
-    /// <typeparam name="T">The data type to deserialize from the YAML.</typeparam>
-    public class YamlMarkdown<T> where T : new()
+    private IDeserializer _yaml = null!;
+    private ISerializer _yamlSerializer = null!;
+
+    public YamlMarkdown(IDeserializer? deserializerBuilder = null)
     {
-        private IDeserializer yaml = null!;
-        private ISerializer yamlSerializer = null!;
+        Init(deserializerBuilder);
+    }
 
-        public YamlMarkdown(IDeserializer? deserializerBuilder = null)
-        {
-            init(deserializerBuilder);
-        }
+    public YamlMarkdown(string filePath, IDeserializer? deserializerBuilder = null) : this(deserializerBuilder)
+    {
+        Parse(filePath);
+    }
 
-        public YamlMarkdown(string filePath, IDeserializer? deserializerBuilder = null) : this(deserializerBuilder)
-        {
-            Parse(filePath);
-        }
+    public YamlMarkdown(TextReader reader, IDeserializer? deserializerBuilder = null) : this(deserializerBuilder)
+    {
+        Parse(reader);
+    }
 
-        public YamlMarkdown(TextReader reader, IDeserializer? deserializerBuilder = null) : this(deserializerBuilder)
-        {
-            Parse(reader);
-        }
-
-        private void init(IDeserializer? deserializerBuilder = null)
-        {
-            yaml = deserializerBuilder ?? new DeserializerBuilder().Build();
-            yamlSerializer = new Serializer();
-        }
+    private void Init(IDeserializer? deserializerBuilder = null)
+    {
+        _yaml = deserializerBuilder ?? new DeserializerBuilder().Build();
+        _yamlSerializer = new Serializer();
+    }
 
         /// <summary>
-        /// Parses a file from the file system.
-        /// </summary>
-        /// <param name="path">The file path.</param>
-        /// <returns>The deserialized object.</returns>
-        public T Parse(string path)
+    /// Parses a file from the file system.
+    /// </summary>
+    /// <param name="path">The file path.</param>
+    /// <returns>The deserialized object.</returns>
+    public T Parse(string path)
+    {
+        T? t;
+        FileName = Path.GetFileNameWithoutExtension(path);
+        var text = File.ReadAllText(path);
+        using (var input = new StringReader(text))
         {
-            T? t;
-            FileName = Path.GetFileNameWithoutExtension(path);
-            var text = File.ReadAllText(path);
-            using (var input = new StringReader(text))
-            {
-                var parser = new Parser(input);
-                parser.Consume<StreamStart>();
-                parser.Consume<DocumentStart>();
-                try
-                {
-                    t = yaml.Deserialize<T>(parser);
-                }
-                catch (SyntaxErrorException se)
-                {
-                    throw new SyntaxErrorException("An exception occured parsing the YAML. Check the dash " +
-                                                   "separators and the YAML syntax before trying again. Further " +
-                                                   "details can be found in the original inner exception.", se);
-                }
-                catch (YamlException ye)
-                {
-                    throw new SyntaxErrorException($"An exception occured parsing {path} - {ye.InnerException?.Message} ");
-                }
-
-                parser.Consume<DocumentEnd>();
-                            // YAML delimiter
-
-                string ss = "---"+Environment.NewLine;
-                // move past first one
-                string skipfidx = text.Substring(text.IndexOf(ss) + ss.Length);
-                // index past second one
-                int lidx = skipfidx.IndexOf(ss)+ss.Length;
-                // Markdown text after second delimiter
-                Markdown = skipfidx.Substring(lidx);
-                Html = Render(Markdown);
-            }
-
-            DataObject = t;
-            return t;
-        }
-
-        /// <summary>
-        /// Parse the <see cref="TextReader"/> and return the deserialized YAML.
-        /// </summary>
-        /// <param name="textReader">The <see cref="TextReader"/> to deserialize.</param>
-        /// <returns></returns>
-        public T Parse(TextReader textReader)
-        {
-            T? t;
-            var parser = new Parser(textReader);
+            var parser = new Parser(input);
             parser.Consume<StreamStart>();
             parser.Consume<DocumentStart>();
             try
             {
-                t = yaml.Deserialize<T>(parser);
+                t = _yaml.Deserialize<T>(parser);
             }
             catch (SyntaxErrorException se)
             {
-                throw new SyntaxErrorException("An exception occured parsing the YAML. Check the dash " +
+                throw new SyntaxErrorException("An exception occurred parsing the YAML. Check the dash " +
                                                "separators and the YAML syntax before trying again. Further " +
                                                "details can be found in the original inner exception.", se);
             }
             catch (YamlException ye)
             {
-                throw new SyntaxErrorException($"An exception occured parsing text - {ye.Message} ");
+                throw new SyntaxErrorException($"An exception occurred parsing {path} - {ye.InnerException?.Message} ");
             }
+
             parser.Consume<DocumentEnd>();
-            Markdown = textReader.ReadToEnd();
+
+            // YAML delimiter
+            var delimiter = "---" + Environment.NewLine;
+            // move past first one
+            var firstDelimiterEnd = text.IndexOf(delimiter, StringComparison.Ordinal) + delimiter.Length;
+            var afterFirstDelimiter = text[firstDelimiterEnd..];
+            // index past second one
+            var secondDelimiterEnd = afterFirstDelimiter.IndexOf(delimiter, StringComparison.Ordinal) + delimiter.Length;
+            // Markdown text after second delimiter
+            Markdown = afterFirstDelimiter[secondDelimiterEnd..];
             Html = Render(Markdown);
-            DataObject = t;
-            return t;
         }
 
-        /// <summary>
-        /// Save the YAML and markdown to a file.
-        /// </summary>
-        /// <param name="obj">The typed object you wish to save</param>
-        /// <param name="markdown">The markdown you wish to save with it</param>
-        /// <param name="path">The path to persist data to.</param>
-        /// <remarks>
-        /// This method saves your YAML and content as a YAML-flavored Markdown file.
-        /// </remarks>
-        public void Save(T? obj, string markdown, string path)
-        {
-            var y = yamlSerializer.Serialize(obj ?? throw new ArgumentNullException(nameof(obj)));
-            var sb = new StringBuilder();
-            sb.AppendLine("---");
-            sb.Append(y);
-            sb.AppendLine("---");
-            sb.Append(markdown);
-            File.WriteAllText(path, sb.ToString());
-        }
-
-        public void Save(string markdown, string path)
-        {
-            Save(DataObject, markdown, path);
-        }
-
-
-        /// <summary>
-        /// Render the Markdown data to generic HTML.
-        /// </summary>
-        /// <param name="markup">The Markdown to mark up.</param>
-        /// <returns>Generic HTML markup.</returns>
-        private static string Render(string markup)
-        {
-            var sb = new StringBuilder();
-            var sw = new StringWriter(sb);
-            var render = new HtmlRenderer(sw);
-            var pipeline = new MarkdownPipelineBuilder()
-                .Build();
-            pipeline.Setup(render);
-            var doc = MarkdownParser.Parse(markup);
-            render.Render(doc);
-            sw.Flush();
-            return sb.ToString();
-        }
-
-        public string FileName { get; set; } = null!;
-        public T? DataObject { get; set; }
-
-        /// <summary>
-        /// Gets the markdown pulled from the YAML/Markdown file.
-        /// </summary>
-        public string Markdown { get; set; } = null!;
-
-        /// <summary>
-        /// Gets the parsed Markdown from the YAML/Markdown file.
-        /// </summary>
-        // ReSharper disable once UnusedAutoPropertyAccessor.Global
-        public string Html { get; set; } = null!;
+        DataObject = t;
+        return t;
     }
+
+        /// <summary>
+    /// Parse the <see cref="TextReader"/> and return the deserialized YAML.
+    /// </summary>
+    /// <param name="textReader">The <see cref="TextReader"/> to deserialize.</param>
+    /// <returns>The deserialized object.</returns>
+    public T Parse(TextReader textReader)
+    {
+        T? t;
+        var parser = new Parser(textReader);
+        parser.Consume<StreamStart>();
+        parser.Consume<DocumentStart>();
+        try
+        {
+            t = _yaml.Deserialize<T>(parser);
+        }
+        catch (SyntaxErrorException se)
+        {
+            throw new SyntaxErrorException("An exception occurred parsing the YAML. Check the dash " +
+                                           "separators and the YAML syntax before trying again. Further " +
+                                           "details can be found in the original inner exception.", se);
+        }
+        catch (YamlException ye)
+        {
+            throw new SyntaxErrorException($"An exception occurred parsing text - {ye.Message} ");
+        }
+        parser.Consume<DocumentEnd>();
+        Markdown = textReader.ReadToEnd();
+        Html = Render(Markdown);
+        DataObject = t;
+        return t;
+    }
+
+        /// <summary>
+    /// Save the YAML and markdown to a file.
+    /// </summary>
+    /// <param name="obj">The typed object you wish to save</param>
+    /// <param name="markdown">The markdown you wish to save with it</param>
+    /// <param name="path">The path to persist data to.</param>
+    /// <remarks>
+    /// This method saves your YAML and content as a YAML-flavored Markdown file.
+    /// </remarks>
+    public void Save(T? obj, string markdown, string path)
+    {
+        ArgumentNullException.ThrowIfNull(obj);
+        var y = _yamlSerializer.Serialize(obj);
+        var sb = new StringBuilder();
+        sb.AppendLine("---");
+        sb.Append(y);
+        sb.AppendLine("---");
+        sb.Append(markdown);
+        File.WriteAllText(path, sb.ToString());
+    }
+
+    public void Save(string markdown, string path)
+    {
+        Save(DataObject, markdown, path);
+    }
+
+    /// <summary>
+    /// Render the Markdown data to generic HTML.
+    /// </summary>
+    /// <param name="markup">The Markdown to mark up.</param>
+    /// <returns>Generic HTML markup.</returns>
+    private static string Render(string markup)
+    {
+        var sb = new StringBuilder();
+        using var sw = new StringWriter(sb);
+        var render = new HtmlRenderer(sw);
+        var pipeline = new MarkdownPipelineBuilder().Build();
+        pipeline.Setup(render);
+        var doc = MarkdownParser.Parse(markup);
+        render.Render(doc);
+        sw.Flush();
+        return sb.ToString();
+    }
+
+    public string FileName { get; set; } = null!;
+    public T? DataObject { get; set; }
+
+    /// <summary>
+    /// Gets the markdown pulled from the YAML/Markdown file.
+    /// </summary>
+    public string Markdown { get; set; } = null!;
+
+    /// <summary>
+    /// Gets the parsed Markdown from the YAML/Markdown file.
+    /// </summary>
+    // ReSharper disable once UnusedAutoPropertyAccessor.Global
+    public string Html { get; set; } = null!;
 }

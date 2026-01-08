@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net10.0</TargetFramework>
         <AssemblyName>EPS.Extensions.SiteMapIndex</AssemblyName>
         <RootNamespace>EPS.Extensions.SiteMapIndex</RootNamespace>
         <PackageId>EPS.Extensions.SiteMapIndex</PackageId>
@@ -15,10 +15,10 @@
         <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <PackageTags>site map, sitemap, site map index, sitemapindex</PackageTags>
-        <PackageReleaseNotes>upgrade to net8.0</PackageReleaseNotes>
+        <PackageReleaseNotes>upgrade to net10.0</PackageReleaseNotes>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>8.0.0</PackageVersion>
-        <LangVersion>10</LangVersion>
+        <PackageVersion>10.0.0</PackageVersion>
+        <LangVersion>13</LangVersion>
     </PropertyGroup>
     <ItemGroup>
         <None Update="icon.png">

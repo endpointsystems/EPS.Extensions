@@ -9,6 +9,6 @@ namespace EPS.Extensions.SiteMapIndex;
 /// </remarks>
 public class SiteMapConfig
 {
-    public int maxFileSize { get; init; } = 50000000;
-    public int maxLocationCount { get; init; } = 50000;
+    public int MaxFileSize { get; init; } = 50000000;
+    public int MaxLocationCount { get; init; } = 50000;
 }

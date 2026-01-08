@@ -63,27 +63,26 @@ public class SiteMapIndex
     /// <param name="stream">The stream to put the sitemap XML into.</param>
     public async Task<Stream> Parse(Stream stream)
     {
-        var writer = XmlWriter.Create(stream,
+        await using var writer = XmlWriter.Create(stream,
             new XmlWriterSettings
             {
                 Async = true, Encoding = Encoding.UTF8, NewLineHandling = NewLineHandling.None,
                 OmitXmlDeclaration = false, NewLineOnAttributes = false, Indent = false,
-                WriteEndDocumentOnClose = true,CloseOutput = false,NewLineChars = string.Empty,
+                WriteEndDocumentOnClose = true, CloseOutput = false, NewLineChars = string.Empty,
                 IndentChars = string.Empty
             });
-        writer.WriteStartElement("sitemapindex",Constants.URLSET);
+        await writer.WriteStartElementAsync(null, "sitemapindex", Constants.URLSET);
         foreach (var sm in SiteMaps)
         {
-            await writer.WriteStartElementAsync(string.Empty,"sitemap",string.Empty);
-            await writer.WriteElementStringAsync(string.Empty, "loc", string.Empty,
-                sm.SiteMapPath.ToString());
+            await writer.WriteStartElementAsync(null, "sitemap", null);
+            await writer.WriteElementStringAsync(null, "loc", null, sm.SiteMapPath.ToString());
             if (sm.LastModified > DateTime.MinValue)
-                await writer.WriteElementStringAsync(string.Empty, "lastmod", string.Empty,
+                await writer.WriteElementStringAsync(null, "lastmod", null,
                     sm.LastModified.ToString("yyyy-MM-dd"));
             await writer.WriteEndElementAsync();
         }
         await writer.WriteEndElementAsync();
-        writer.Close();
+        await writer.FlushAsync();
         stream.Seek(0, SeekOrigin.Begin);
         return stream;
     }
