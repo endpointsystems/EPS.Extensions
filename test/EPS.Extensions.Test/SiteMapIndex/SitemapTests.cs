@@ -70,8 +70,8 @@ namespace EPS.Extensions.Test.SiteMapIndex
 
             var smap = new SiteMap(new Uri("https://my.longandfancy.website.com/sitemap.xml"), new SiteMapConfig()
             {
-                maxLocationCount = 50000,
-                maxFileSize = 50000 //50k
+                MaxLocationCount = 50000,
+                MaxFileSize = 50000 //50k
             });
 
             var ms = await smap.Parse(stack);

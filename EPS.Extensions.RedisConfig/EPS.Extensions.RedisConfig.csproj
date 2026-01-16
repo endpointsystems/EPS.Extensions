@@ -10,9 +10,9 @@
         <PackageIcon>icon.png</PackageIcon>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://endpointsystems.com/blog/eps-extensions-nuget-packages</PackageProjectUrl>
-        <PackageReleaseNotes>Initial release of Redis configuration provider.</PackageReleaseNotes>
+        <PackageReleaseNotes>Added Redis JSON storage as an additional option.</PackageReleaseNotes>
         <PackageTags>Redis,Configuration,Microsoft.Extensions.Configuration,Redis.OM</PackageTags>
-        <PackageVersion>10.0.0</PackageVersion>
+        <PackageVersion>10.1.0</PackageVersion>
         <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <LangVersion>latest</LangVersion>
@@ -21,8 +21,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.0-preview.1.25080.5" />
-        <PackageReference Include="Redis.OM" Version="0.7.6" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.2" />
+        <PackageReference Include="NRedisStack" Version="1.2.0" />
+        <PackageReference Include="Redis.OM" Version="1.1.0" />
     </ItemGroup>
 
     <ItemGroup>

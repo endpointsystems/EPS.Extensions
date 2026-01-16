@@ -1,5 +1,8 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Text.Json;
 using Microsoft.Extensions.Configuration;
+using NRedisStack;
+using NRedisStack.RedisStackCommands;
 using Redis.OM;
 using Redis.OM.Contracts;
 using StackExchange.Redis;
@@ -10,6 +13,7 @@ namespace EPS.Extensions.RedisConfig;
 /// A configuration provider that reads configuration from Redis using Redis.OM.
 /// Supports JSON document storage with optional polling or pub/sub change notification.
 /// </summary>
+[SuppressMessage("ReSharper", "ClassWithVirtualMembersNeverInherited.Global")]
 public class RedisConfigurationProvider : ConfigurationProvider, IDisposable
 {
     private readonly RedisConfigurationSource _source;
@@ -66,16 +70,27 @@ public class RedisConfigurationProvider : ConfigurationProvider, IDisposable
             return;
 
         var database = _multiplexer.GetDatabase();
-        var jsonValue = database.StringGet(_options.ConfigurationKey);
+        string? json;
 
-        if (jsonValue.IsNullOrEmpty)
+        if (_options.StorageMode == StorageMode.RedisJson)
+        {
+            var jsonCommands = database.JSON();
+            var result = jsonCommands.Get(_options.ConfigurationKey);
+            json = result?.ToString();
+        }
+        else
+        {
+            var jsonValue = database.StringGet(_options.ConfigurationKey);
+            json = jsonValue.IsNullOrEmpty ? null : jsonValue.ToString();
+        }
+
+        if (string.IsNullOrEmpty(json))
         {
             Data = new Dictionary<string, string?>(StringComparer.OrdinalIgnoreCase);
             _lastHash = null;
             return;
         }
 
-        var json = jsonValue.ToString();
         var currentHash = ComputeHash(json);
 
         // Only update if the configuration has changed

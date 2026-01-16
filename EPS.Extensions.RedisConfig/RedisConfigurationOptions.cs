@@ -1,6 +1,22 @@
 namespace EPS.Extensions.RedisConfig;
 
 /// <summary>
+/// Specifies how the configuration is stored in Redis.
+/// </summary>
+public enum StorageMode
+{
+    /// <summary>
+    /// Store configuration as a plain Redis string (default, no modules required).
+    /// </summary>
+    String,
+
+    /// <summary>
+    /// Store configuration using RedisJSON module (requires RedisJSON module installed on Redis server).
+    /// </summary>
+    RedisJson
+}
+
+/// <summary>
 /// Specifies how the configuration provider should handle configuration changes.
 /// </summary>
 public enum ReloadMode
@@ -31,6 +47,13 @@ public class RedisConfigurationOptions
     /// Example: "localhost:6379" or "redis://user:password@host:port"
     /// </summary>
     public string ConnectionString { get; set; } = "localhost:6379";
+
+    /// <summary>
+    /// Gets or sets how the configuration is stored in Redis.
+    /// Default is <see cref="StorageMode.String"/> which stores JSON as a plain string.
+    /// Use <see cref="StorageMode.RedisJson"/> to use the RedisJSON module.
+    /// </summary>
+    public StorageMode StorageMode { get; set; } = StorageMode.String;
 
     /// <summary>
     /// Gets or sets the Redis key where the configuration JSON document is stored.
