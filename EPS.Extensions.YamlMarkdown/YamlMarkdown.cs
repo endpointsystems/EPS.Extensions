@@ -34,6 +34,21 @@ public class YamlMarkdown<T> where T : new()
         Parse(reader);
     }
 
+    /// <summary>
+    /// Parse YAML+Markdown content from a string, setting the FileName property.
+    /// Useful when content is loaded from blob storage or other non-file sources.
+    /// </summary>
+    /// <param name="content">The raw YAML front matter + markdown content.</param>
+    /// <param name="fileName">The logical filename (e.g. "my-post.md"). Extension is stripped for the FileName property.</param>
+    /// <param name="deserializerBuilder">Optional custom YAML deserializer.</param>
+    public YamlMarkdown(string content, string fileName, IDeserializer? deserializerBuilder = null)
+        : this(deserializerBuilder)
+    {
+        FileName = Path.GetFileNameWithoutExtension(fileName);
+        using var reader = new StringReader(content);
+        Parse(reader);
+    }
+
     private void Init(IDeserializer? deserializerBuilder = null)
     {
         _yaml = deserializerBuilder ?? new DeserializerBuilder().Build();
