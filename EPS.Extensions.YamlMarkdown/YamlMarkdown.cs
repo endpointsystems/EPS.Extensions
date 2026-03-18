@@ -47,6 +47,23 @@ public class YamlMarkdown<T> where T : new()
         FileName = Path.GetFileNameWithoutExtension(fileName);
         using var reader = new StringReader(content);
         Parse(reader);
+
+        // Fix: Parse(TextReader) loses markdown because YamlDotNet
+        // consumes the entire StringReader. Extract manually.
+        if (string.IsNullOrEmpty(Markdown))
+        {
+            var sep = "---" + Environment.NewLine;
+            var first = content.IndexOf(sep, StringComparison.Ordinal);
+            if (first >= 0)
+            {
+                var second = content.IndexOf(sep, first + sep.Length, StringComparison.Ordinal);
+                if (second >= 0)
+                    Markdown = content[(second + sep.Length)..];
+            }
+
+            if (!string.IsNullOrEmpty(Markdown))
+                Html = Render(Markdown);
+        }
     }
 
     private void Init(IDeserializer? deserializerBuilder = null)

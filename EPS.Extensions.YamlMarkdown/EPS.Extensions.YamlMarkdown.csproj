@@ -9,8 +9,8 @@
         <RepositoryUrl>https://github.com/endpointsystems/EPS.Extensions</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <PackageTags>Markdown, YAML, YAML front-end, SEO, Markdig, YamlDotNet</PackageTags>
-        <PackageReleaseNotes>update to .NET 10</PackageReleaseNotes>
-        <PackageVersion>10.0.0</PackageVersion>
+        <PackageReleaseNotes>Fix critical bug in markdown read</PackageReleaseNotes>
+        <PackageVersion>10.2.2</PackageVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageIcon>icon.png</PackageIcon>
         <LangVersion>13</LangVersion>
@@ -20,7 +20,7 @@
 
     <ItemGroup>
       <PackageReference Include="Html2Markdown" Version="7.1.2.20" />
-      <PackageReference Include="Markdig" Version="0.44.0" />
+      <PackageReference Include="Markdig" Version="1.1.1" />
       <PackageReference Include="YamlDotNet" Version="16.3.0" />
     </ItemGroup>
     <ItemGroup>
