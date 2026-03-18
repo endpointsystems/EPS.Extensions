@@ -45,25 +45,7 @@ public class YamlMarkdown<T> where T : new()
         : this(deserializerBuilder)
     {
         FileName = Path.GetFileNameWithoutExtension(fileName);
-        using var reader = new StringReader(content);
-        Parse(reader);
-
-        // Fix: Parse(TextReader) loses markdown because YamlDotNet
-        // consumes the entire StringReader. Extract manually.
-        if (string.IsNullOrEmpty(Markdown))
-        {
-            var sep = "---" + Environment.NewLine;
-            var first = content.IndexOf(sep, StringComparison.Ordinal);
-            if (first >= 0)
-            {
-                var second = content.IndexOf(sep, first + sep.Length, StringComparison.Ordinal);
-                if (second >= 0)
-                    Markdown = content[(second + sep.Length)..];
-            }
-
-            if (!string.IsNullOrEmpty(Markdown))
-                Html = Render(Markdown);
-        }
+        ParseContent(content);
     }
 
     private void Init(IDeserializer? deserializerBuilder = null)
@@ -79,12 +61,32 @@ public class YamlMarkdown<T> where T : new()
     /// <returns>The deserialized object.</returns>
     public T Parse(string path)
     {
-        T? t;
         FileName = Path.GetFileNameWithoutExtension(path);
         var text = File.ReadAllText(path);
-        using (var input = new StringReader(text))
+        return ParseContent(text);
+    }
+
+        /// <summary>
+    /// Parse the <see cref="TextReader"/> and return the deserialized YAML.
+    /// </summary>
+    /// <param name="textReader">The <see cref="TextReader"/> to deserialize.</param>
+    /// <returns>The deserialized object.</returns>
+    public T Parse(TextReader textReader)
+    {
+        var content = textReader.ReadToEnd();
+        return ParseContent(content);
+    }
+
+    /// <summary>
+    /// Core parsing logic shared by all entry points. Deserializes YAML front matter
+    /// and extracts the markdown body from a raw content string.
+    /// </summary>
+    private T ParseContent(string content)
+    {
+        T? t;
+        using (var reader = new StringReader(content))
         {
-            var parser = new Parser(input);
+            var parser = new Parser(reader);
             parser.Consume<StreamStart>();
             parser.Consume<DocumentStart>();
             try
@@ -99,57 +101,39 @@ public class YamlMarkdown<T> where T : new()
             }
             catch (YamlException ye)
             {
-                throw new SyntaxErrorException($"An exception occurred parsing {path} - {ye.InnerException?.Message} ");
+                throw new SyntaxErrorException($"An exception occurred parsing text - {ye.Message} ");
             }
-
             parser.Consume<DocumentEnd>();
-
-            // YAML delimiter
-            var delimiter = "---" + Environment.NewLine;
-            // move past first one
-            var firstDelimiterEnd = text.IndexOf(delimiter, StringComparison.Ordinal) + delimiter.Length;
-            var afterFirstDelimiter = text[firstDelimiterEnd..];
-            // index past second one
-            var secondDelimiterEnd = afterFirstDelimiter.IndexOf(delimiter, StringComparison.Ordinal) + delimiter.Length;
-            // Markdown text after second delimiter
-            Markdown = afterFirstDelimiter[secondDelimiterEnd..];
-            Html = Render(Markdown);
         }
 
+        Markdown = ExtractMarkdownBody(content);
+        Html = Render(Markdown);
         DataObject = t;
         return t;
     }
 
-        /// <summary>
-    /// Parse the <see cref="TextReader"/> and return the deserialized YAML.
+    /// <summary>
+    /// Extracts the markdown body after the YAML front matter delimiters.
+    /// Handles both standard format (---\n...\n---\n) and legacy format
+    /// where the opening --- is missing.
     /// </summary>
-    /// <param name="textReader">The <see cref="TextReader"/> to deserialize.</param>
-    /// <returns>The deserialized object.</returns>
-    public T Parse(TextReader textReader)
+    private static string ExtractMarkdownBody(string content)
     {
-        T? t;
-        var parser = new Parser(textReader);
-        parser.Consume<StreamStart>();
-        parser.Consume<DocumentStart>();
-        try
+        var sep = "---" + Environment.NewLine;
+        var first = content.IndexOf(sep, StringComparison.Ordinal);
+        if (first < 0)
+            return string.Empty;
+
+        if (first == 0)
         {
-            t = _yaml.Deserialize<T>(parser);
+            // Standard format: opens with ---\n, find the closing ---
+            var second = content.IndexOf(sep, sep.Length, StringComparison.Ordinal);
+            return second >= 0 ? content[(second + sep.Length)..] : string.Empty;
         }
-        catch (SyntaxErrorException se)
-        {
-            throw new SyntaxErrorException("An exception occurred parsing the YAML. Check the dash " +
-                                           "separators and the YAML syntax before trying again. Further " +
-                                           "details can be found in the original inner exception.", se);
-        }
-        catch (YamlException ye)
-        {
-            throw new SyntaxErrorException($"An exception occurred parsing text - {ye.Message} ");
-        }
-        parser.Consume<DocumentEnd>();
-        Markdown = textReader.ReadToEnd();
-        Html = Render(Markdown);
-        DataObject = t;
-        return t;
+
+        // Legacy format: no opening ---, first --- is the closing delimiter.
+        // Everything after it is markdown (may contain its own --- horizontal rules).
+        return content[(first + sep.Length)..];
     }
 
         /// <summary>

@@ -10,7 +10,7 @@
         <RepositoryType>GitHub</RepositoryType>
         <PackageTags>Markdown, YAML, YAML front-end, SEO, Markdig, YamlDotNet</PackageTags>
         <PackageReleaseNotes>Fix critical bug in markdown read</PackageReleaseNotes>
-        <PackageVersion>10.2.2</PackageVersion>
+        <PackageVersion>10.2.3</PackageVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageIcon>icon.png</PackageIcon>
         <LangVersion>13</LangVersion>
